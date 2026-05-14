@@ -242,8 +242,14 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
     and "good faith" barriers) and s47A plan variation — the new "avoid
     doubt" clause confirming a variation can increase or decrease total
     funding (29).
-  - ⏭ Remaining: s45/45A (electronic claims forms, Schedule 2 Part 2) and
-    s9A (approved forms); the unchanged tails of s73ZN ((3)–(9)), s73ZDA
-    field lists, and s47A's 100+ unchanged plan-mechanics blocks. All lower
-    priority; the engine renders them the moment keys are added to
-    `data/plain-english.json`.
+  - ✅ Batch 10 — s9A approved forms + s45/s45A claims (Schedule 2 Pt 2,
+    electronic claims forms): the new claim-information-request machinery
+    in s45 ((3A)–(3E)), and the s9A/s45A hooks for approved electronic
+    claim manners (28).
+
+  **All sections the bill substantively changes are now covered.** What
+  remains is only the unchanged technical *tails* of large sections — the
+  engine renders them fine without bubbles:
+  - ⏭ s73ZN (3)–(9) banning-order procedure (unchanged); s73ZDA register
+    field lists (self-explanatory); s47A's ~100 unchanged plan-mechanics
+    blocks; s45/s45A unchanged funding-cap sub-paragraphs. Optional polish.

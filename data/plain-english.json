@@ -378,5 +378,36 @@
  "proposed:s47A-b67": "An 'avoid doubt' clause clarifying how the plan-variation rules operate.",
  "proposed:s47A-b68": "NEW (items 11–12): confirms a plan variation can INCREASE OR DECREASE a participant's total funding amount — unless the Act or the NDIS rules expressly say otherwise. Puts beyond doubt that variations are not one-directional.",
  "proposed:s47A-b69": "the Act itself; or",
- "proposed:s47A-b70": "the NDIS rules made for the purposes of another provision of the Act."
+ "proposed:s47A-b70": "the NDIS rules made for the purposes of another provision of the Act.",
+
+ "s9A-b1": "The CEO can approve a form for use under any provision of the Act.",
+ "original:s9A-b2": "Each approved form must be published on the Agency's website.",
+ "proposed:s9A-b2": "CHANGED: the CEO must publish the form OR a representation of it — wording that accommodates electronic and online forms, not just static documents.",
+ "proposed:s9A-b3": "NEW: the CEO can approve different forms for different classes of application, claim, report, request or statement — enabling tailored (including electronic) claim forms.",
+
+ "s45-b1": "How an amount payable under a participant's plan is to be paid.",
+ "s45-b6": "The payment rules can also deal with instalments versus lump sums, and the timing of payments.",
+ "s45-b10": "The NDIS rules can require a person to nominate a bank account before any amount is paid to them.",
+ "proposed:s45-b11": "NEW (3A): the Agency must NOT pay a claim if the claimant has not given the CEO the further information or documents requested under (3B) within the set period.",
+ "proposed:s45-b12": "Note: if a claim cannot be paid for that reason, the person can simply resubmit it under s45A.",
+ "proposed:s45-b13": "NEW (3B): the CEO may, by written notice, require a claimant to give further information or documents reasonably needed to assess the claim.",
+ "proposed:s45-b14": "NEW (3BA): a privacy safeguard — the CEO must not make that request unless satisfied it would not unreasonably interfere with or prejudice the person's privacy.",
+ "proposed:s45-b15": "NEW (3C): the notice must allow at least 14 days to provide the information or documents.",
+ "proposed:s45-b16": "NEW (3D): the CEO can extend that period, more than once if needed.",
+ "proposed:s45-b17": "NEW (3E): the CEO may, where appropriate, treat the claim as if the information had been provided on time — a discretion to pay anyway.",
+ "original:s45-b11": "The Agency must not pay an amount if doing so would breach a plan's funding caps — spelled out below for new- and old-framework plans.",
+ "proposed:s45-b18": "The Agency must not pay an amount if doing so would breach a plan's funding caps — spelled out below for new- and old-framework plans.",
+ "original:s45-b23": "Exceptions to the funding-cap bar — the Agency may still pay where the CEO is satisfied of one of the following.",
+ "proposed:s45-b30": "Exceptions to the funding-cap bar — the Agency may still pay where the CEO is satisfied of one of the following.",
+
+ "s45A-b1": "An amount is only payable for a support if a proper claim has been made to the CEO — meeting the requirements in subsections (2), (3) and (5).",
+ "s45A-b2": "Who can make a claim —",
+ "s45A-b3": "the person who manages the funding for the support under the plan; or",
+ "s45A-b4": "if that is the Agency, the person who actually provides the support to the participant.",
+ "s45A-b5": "A claim must —",
+ "s45A-b6": "use the approved form (if there is one);",
+ "proposed:s45A-b7": "NEW (aa): a claim must also be made in any manner the CEO has approved in writing — the hook that enables a mandated electronic claims channel.",
+ "original:s45A-b7": "include any information and documents the CEO requires.",
+ "proposed:s45A-b8": "include any information and documents the CEO requires.",
+ "proposed:s45A-b10": "NEW (3A): the CEO can approve different claim-lodgement manners for different classes of claim."
 }
