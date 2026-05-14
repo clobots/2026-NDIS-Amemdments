@@ -218,9 +218,16 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
 - ✅ **Task 5 — JS engine.** `js/app.js`; all render tests pass.
 - ✅ **Task 6 — Integrate / test / deploy.** Committed, pushed, GitHub Pages
   live and verified (all assets 200).
-- 🔄 **Task 7 — Plain-English translations.** Incremental.
+- 🔄 **Task 7 — Plain-English translations.** Incremental; 130 done.
   - ✅ Batch 1 — Sch 2 Pt 1: s29 (before + after) + new s29A cooling-off (25).
   - ✅ Batch 2 — item 33 / s73B registration offences, before + after (28).
-  - ⏭ Batch 3 — item 80 / s73ZN (banning-order expansion).
-  - ⏭ Batch 4 — Sch 1 Pt 4 / new s73ZOA–C (anti-promotion orders).
-  - ⏭ Then the remaining affected sections (checklist above).
+  - ✅ Batch 3 — item 80 / s73ZN banning orders — the new (2B)/(2C)
+    expansion in full, the shared subsection anchors, and the repealed
+    civil-penalty subsection (28).
+  - ✅ Batch 4 — Sch 1 Pt 4 / new s73ZOA–C anti-promotion orders, in full (49).
+  - ⏭ Remaining: the other affected sections in the checklist above —
+    e.g. s56/57/59A info-gathering & false-info penalties, the s67B–D
+    protected-information offences, s73ZNA, s73ZDA provider register,
+    s73ZA/73ZBA whistleblower protections, s45/45A/47A NDIA operations.
+    Also the unchanged tail of s73ZN ((3)–(9)). All lower priority than the
+    four batches above; the engine renders them the moment keys are added.
