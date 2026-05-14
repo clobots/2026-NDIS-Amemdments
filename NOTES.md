@@ -247,9 +247,12 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
     in s45 ((3A)–(3E)), and the s9A/s45A hooks for approved electronic
     claim manners (28).
 
-  **All sections the bill substantively changes are now covered.** What
-  remains is only the unchanged technical *tails* of large sections — the
-  engine renders them fine without bubbles:
-  - ⏭ s73ZN (3)–(9) banning-order procedure (unchanged); s73ZDA register
-    field lists (self-explanatory); s47A's ~100 unchanged plan-mechanics
-    blocks; s45/s45A unchanged funding-cap sub-paragraphs. Optional polish.
+  - ✅ Batch 11 — completed s73ZN: the unchanged (3)–(9) banning-order
+    procedure tail, both tabs (40).
+
+  **All sections the bill substantively changes are fully covered.** What
+  remains is only unchanged technical *tails* of large sections — the engine
+  renders them fine without bubbles:
+  - ⏭ s73ZDA register field lists (self-explanatory); s47A's ~100 unchanged
+    plan-mechanics blocks; s45/s45A unchanged funding-cap sub-paragraphs.
+    Optional polish only.
