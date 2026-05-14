@@ -249,10 +249,12 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
 
   - ✅ Batch 11 — completed s73ZN: the unchanged (3)–(9) banning-order
     procedure tail, both tabs (40).
+  - ✅ Batch 12 — completed s73ZDA: all register field-list items (34).
 
-  **All sections the bill substantively changes are fully covered.** What
-  remains is only unchanged technical *tails* of large sections — the engine
-  renders them fine without bubbles:
-  - ⏭ s73ZDA register field lists (self-explanatory); s47A's ~100 unchanged
-    plan-mechanics blocks; s45/s45A unchanged funding-cap sub-paragraphs.
-    Optional polish only.
+  **Every section the bill touches is now fully covered**, including the new
+  sections end to end. What remains is only unchanged technical *tails* of
+  two large pre-existing sections — the engine renders them fine without
+  bubbles:
+  - ⏭ s47A's ~100 unchanged plan-mechanics blocks; s45/s45A unchanged
+    funding-cap sub-paragraphs. Optional polish only — not changed by the
+    bill, and dense funding-mechanics law.
