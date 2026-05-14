@@ -141,7 +141,40 @@ the site is always usable, just progressively richer.
 4. **Schedule 1 Part 4 — Anti-promotion orders** (items 75–79) → new s73ZOA–C.
    Predatory-marketing controls; the "insert new section" case.
 
+## Data (`data/`, built by `sources/build_data.py`)
+
+`build_data.py` parses the downloaded HTML (via BeautifulSoup, using the
+Federal Register's CSS classes) into three JSON files the app renders from.
+Run `python3 sources/build_data.py` to rebuild.
+
+- `bill.json` — `{meta, nodes[]}`. `nodes` is a flat ordered list:
+  `schedule` / `part` / `division` / `act-ref` headings, `bill-section`
+  (the amending Act's own ss 1–3), and `item`. Each `item` has
+  `{num, descriptor, id, content[], target}`. `target` =
+  `{section, relatedSection, newSections[], kind, quotes[]}` — `section` is the
+  existing NDIS Act section the item amends (hover-link target); `quotes` are
+  the strings the item lifts verbatim from the Act (highlight targets);
+  `kind` ∈ `amend | insert-section | provision | structural`.
+- `act-original.json` / `act-proposed.json` — `{meta, sectionIndex, nodes[]}`.
+  `nodes` is a flat ordered list of `chapter` / `part` / `division` /
+  `subdivision` headings and `section`. Each `section` has `blocks[]` with
+  stable IDs `s{num}-b{n}` — these anchor scroll-sync, highlights and bubbles.
+  `sectionIndex` maps section number → node index.
+
+Build result: bill = 3 schedules, 10 parts, **116 items** (105 map to an
+existing section, 12 insert new sections, 3 structural/provision —
+items 44, 67, 92). Original Act = 324 sections; proposed = 338.
+
+**Compilation nuance:** `act-proposed.json` is the official 6 May 2026
+compilation, which incorporates **all** amendments in force by that date — for
+this bill that's everything, but it also includes ss 181Z/181ZA from a separate
+amendment and reflects the removal of s73ZS. This is fine and honest: Tab 2 is
+the real current Act. Both tabs should caption their compilation date + FRL
+link so the basis is transparent.
+
 ## Status
 
-**Sourcing complete.** All three full documents extracted to clean text and
-committed. Next: task 2 — parse into structured JSON.
+- ✅ **Task 1 — Sourcing.** Three full documents extracted to clean text.
+- ✅ **Task 2 — Parse to JSON.** `build_data.py` + `data/*.json` built and
+  validated. Amendment→section mapping auto-derived for 113/116 items.
+- ⏭ **Next: task 3** — design system (CSS, light/dark, Apple-minimal).
