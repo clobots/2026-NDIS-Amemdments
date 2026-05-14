@@ -231,9 +231,12 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
   - ✅ Batch 6 — s67B/67C/67D protected-information offences, before + after
     (the bill adds a civil-penalty pathway alongside each existing criminal
     offence) (67).
+  - ✅ Batch 7 — s56 written notice of requirement + s57 refusal to comply,
+    before + after (the new power to shorten info-gathering deadlines in
+    urgent cases; a civil penalty added to s57) (42).
   - ⏭ Remaining: the other affected sections in the checklist above —
-    e.g. s56/57 info-gathering, s73ZDA provider register, s73ZA
-    whistleblower-eligibility changes, s45/45A/47A NDIA operations, and the
-    unchanged tail of s73ZN ((3)–(9)). All lower priority than the batches
-    above; the engine renders them the moment keys are added to
-    `data/plain-english.json`.
+    e.g. s73F info-gathering for registered providers, s73ZDA provider
+    register, s73ZA whistleblower-eligibility changes, s45/45A/47A NDIA
+    operations, and the unchanged tail of s73ZN ((3)–(9)). All lower priority
+    than the batches above; the engine renders them the moment keys are
+    added to `data/plain-english.json`.
