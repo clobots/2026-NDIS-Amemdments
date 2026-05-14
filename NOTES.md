@@ -220,7 +220,7 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
   live and verified (all assets 200).
 - 🔄 **Task 7 — Plain-English translations.** Incremental.
   - ✅ Batch 1 — Sch 2 Pt 1: s29 (before + after) + new s29A cooling-off (25).
-  - ⏭ Batch 2 — item 33 / s73B (registration offences).
+  - ✅ Batch 2 — item 33 / s73B registration offences, before + after (28).
   - ⏭ Batch 3 — item 80 / s73ZN (banning-order expansion).
   - ⏭ Batch 4 — Sch 1 Pt 4 / new s73ZOA–C (anti-promotion orders).
   - ⏭ Then the remaining affected sections (checklist above).
