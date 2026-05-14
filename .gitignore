@@ -5,3 +5,10 @@
 # Raw downloaded legislation HTML — large and re-downloadable (see NOTES.md).
 # The committed clean-text extracts in sources/*.txt are the working data.
 sources/*.html
+
+# dev-only: jsdom for sources/render_test.js (npm install --no-save jsdom)
+node_modules/
+package-lock.json
+
+# local tooling state
+.claude/

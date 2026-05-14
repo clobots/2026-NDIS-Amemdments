@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NDIS 2026 Amendments — Legislation Comparison</title>
+  <meta name="description" content="Side-by-side comparison of the NDIS Amendment (Integrity and Safeguarding) Act 2026 against the National Disability Insurance Scheme Act 2013 it amends — with plain-English translations." />
+
+  <!-- set theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('ndis-theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+  <div class="app-loading" id="app-loading">Loading legislation…</div>
+
+  <div class="app">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark">NDIS <span class="accent">2026</span> Amendments</span>
+        <span class="brand-sub">Integrity &amp; Safeguarding &middot; legislation comparison</span>
+      </div>
+
+      <span class="header-spacer"></span>
+
+      <div class="legend" aria-label="Amendment type key">
+        <span class="legend-item" data-kind="amend"><span class="legend-dot"></span>Amends a section</span>
+        <span class="legend-item" data-kind="insert"><span class="legend-dot"></span>Inserts new</span>
+        <span class="legend-item" data-kind="structural"><span class="legend-dot"></span>Structural</span>
+        <span class="legend-item" data-kind="provision"><span class="legend-dot"></span>Provision</span>
+      </div>
+
+      <button class="theme-toggle" id="theme-toggle" type="button"
+              aria-label="Toggle dark mode" title="Toggle light / dark theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"
+                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" />
+          <path d="M12 2.5v2M12 19.5v2M4.5 4.5l1.4 1.4M18.1 18.1l1.4 1.4M2.5 12h2M19.5 12h2M4.5 19.5l1.4-1.4M18.1 5.9l1.4-1.4"
+                stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- ===================== PANES ===================== -->
+    <main class="panes">
+
+      <!-- LEFT — the amending Act -->
+      <section class="pane pane--bill" aria-label="Amending Act">
+        <div class="pane-head">
+          <span class="pane-label">Amending Act</span>
+          <span class="pane-title" id="bill-title">NDIS Amendment (Integrity &amp; Safeguarding) Act 2026</span>
+          <span class="spacer"></span>
+          <a class="pane-source" id="bill-source"
+             href="https://www.legislation.gov.au/C2026A00041/latest"
+             target="_blank" rel="noopener">Federal Register &#8599;</a>
+        </div>
+        <div class="pane-body" id="bill-body" aria-live="polite"></div>
+      </section>
+
+      <!-- RIGHT — the NDIS Act 2013, tabbed -->
+      <section class="pane pane--act" aria-label="National Disability Insurance Scheme Act 2013">
+        <div class="pane-head">
+          <div class="tabs" role="tablist" aria-label="Legislation version">
+            <button class="tab is-active" id="tab-original" role="tab"
+                    aria-selected="true" aria-controls="panel-original" data-tab="original">
+              Original NDIS legislation
+            </button>
+            <button class="tab" id="tab-proposed" role="tab"
+                    aria-selected="false" aria-controls="panel-proposed" data-tab="proposed">
+              Proposed Legislation
+            </button>
+          </div>
+          <span class="spacer"></span>
+          <span class="pane-meta" id="act-meta"></span>
+          <a class="pane-source" id="act-source"
+             href="https://www.legislation.gov.au/C2013A00020/latest"
+             target="_blank" rel="noopener">Federal Register &#8599;</a>
+        </div>
+        <div class="pane-body" id="act-body">
+          <div class="tab-panel is-active" id="panel-original" role="tabpanel"
+               aria-labelledby="tab-original"></div>
+          <div class="tab-panel" id="panel-proposed" role="tabpanel"
+               aria-labelledby="tab-proposed" hidden></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ===================== PLAIN-ENGLISH BUBBLE ===================== -->
+  <div class="pe-bubble" id="pe-bubble" role="tooltip" aria-hidden="true">
+    <div class="pe-label"><span class="dot"></span>Plain English</div>
+    <div class="pe-text" id="pe-text"></div>
+    <div class="pe-flag">
+      <span aria-hidden="true">&#9888;</span>
+      AI-drafted summary &mdash; verify before relying on it
+    </div>
+  </div>
+
+  <noscript>
+    <div style="padding:40px;max-width:640px;margin:0 auto;font-family:sans-serif">
+      <h1>JavaScript required</h1>
+      <p>This tool renders the full text of two pieces of legislation and wires them
+      together interactively, which needs JavaScript enabled. The underlying
+      legislation is available verbatim on the
+      <a href="https://www.legislation.gov.au/C2026A00041/latest">Federal Register of Legislation</a>.</p>
+    </div>
+  </noscript>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

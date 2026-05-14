@@ -172,9 +172,38 @@ amendment and reflects the removal of s73ZS. This is fine and honest: Tab 2 is
 the real current Act. Both tabs should caption their compilation date + FRL
 link so the basis is transparent.
 
+## App structure
+
+- `index.html` — shell: header (brand, kind legend, theme toggle), equal
+  split-pane (`#bill-body` left; right pane with Original/Proposed tabs), the
+  reused plain-English bubble element. Sets `data-theme` before first paint.
+- `css/app.css` — full design system: tokens (light + dark), all components,
+  legislative-text indentation, the yellow `mark.match` highlight, the
+  plain-English bubble, responsive fallback (panes stack < 940px).
+- `js/app.js` — the engine. Loads the 4 JSON files, renders all three documents
+  with safe DOM construction (never innerHTML), wires: tab switch (+ per-tab
+  scroll memory), hover-link jump → tab switch + smooth scroll + section pulse
+  + yellow highlight of the item's quotes, plain-English bubble on `.has-pe`
+  paragraph hover, theme toggle (persisted to localStorage).
+
+## Testing
+
+- `sources/validate_data.py` — data-contract + cross-reference check; confirms
+  every hover-link target resolves to a real section. Run after `build_data.py`.
+- `sources/render_test.js` — headless jsdom render + interaction smoke test
+  (14 checks: render counts, jump, highlight, tab switch, theme).
+  Needs `npm install --no-save jsdom`; run `node sources/render_test.js`.
+- Local preview: `python3 -m http.server` then open the printed URL (the app
+  fetches JSON, so `file://` will not work).
+
 ## Status
 
 - ✅ **Task 1 — Sourcing.** Three full documents extracted to clean text.
-- ✅ **Task 2 — Parse to JSON.** `build_data.py` + `data/*.json` built and
-  validated. Amendment→section mapping auto-derived for 113/116 items.
-- ⏭ **Next: task 3** — design system (CSS, light/dark, Apple-minimal).
+- ✅ **Task 2 — Parse to JSON.** `build_data.py` + `data/*.json`, validated.
+- ✅ **Task 3 — Design system.** `css/app.css`.
+- ✅ **Task 4 — HTML shell.** `index.html`.
+- ✅ **Task 5 — JS engine.** `js/app.js`; all 14 render tests pass.
+- 🔄 **Task 6 — Integrate / test / commit / deploy.** In progress.
+- ⏭ **Task 7 — Plain-English translations.** `data/plain-english.json` is an
+  empty stub; the bubble mechanism is live and renders as soon as keys are
+  added. Priority order above.
