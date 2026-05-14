@@ -228,9 +228,12 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
   - ✅ Batch 5 — new offence & whistleblower sections in full: s59A
     (false/misleading info), s73ZNA (banning-order offences — replaces the
     repealed s73ZN(10)), s73ZBA (confidentiality of discloser identity) (52).
+  - ✅ Batch 6 — s67B/67C/67D protected-information offences, before + after
+    (the bill adds a civil-penalty pathway alongside each existing criminal
+    offence) (67).
   - ⏭ Remaining: the other affected sections in the checklist above —
-    e.g. s56/57 info-gathering, the s67B–D protected-information offences,
-    s73ZDA provider register, s73ZA whistleblower-eligibility changes,
-    s45/45A/47A NDIA operations, and the unchanged tail of s73ZN ((3)–(9)).
-    All lower priority than the batches above; the engine renders them the
-    moment keys are added to `data/plain-english.json`.
+    e.g. s56/57 info-gathering, s73ZDA provider register, s73ZA
+    whistleblower-eligibility changes, s45/45A/47A NDIA operations, and the
+    unchanged tail of s73ZN ((3)–(9)). All lower priority than the batches
+    above; the engine renders them the moment keys are added to
+    `data/plain-english.json`.
