@@ -1,23 +1,30 @@
 # NDIS 2026 Amendments — Legislation Comparison Tool
 
-An interactive advocacy tool that puts the **National Disability Insurance Scheme
-Amendment (Integrity and Safeguarding) Act 2026** side by side with the
+A frame-driven web tool that puts the **National Disability Insurance Scheme
+Amendment (Integrity and Safeguarding) Bill** side by side with the
 **National Disability Insurance Scheme Act 2013** it amends.
 
-- **Left frame** — the complete amending Act, verbatim, item by item. Hover an
-  item to surface a link to the NDIS Act section it changes.
-- **Right frame** — the NDIS Act 2013, tabbed:
-  - **Original NDIS legislation** — the Act *before* these amendments. Clicking a
-    left-frame link jumps here and highlights the matching text in yellow.
-  - **Proposed Legislation** — the Act *as amended*.
-- Hover any paragraph in either right-frame tab for a plain-English translation.
+Both panels are **live windows onto the official sources**:
 
-Static site — vanilla HTML/CSS/JS, no build step, GitHub Pages-ready.
+- **Left** — the Bill, embedded live from
+  [ParlInfo](https://parlinfo.aph.gov.au/parlInfo/search/display/display.w3p;query=Id%3A%22legislation%2Fbills%2Fr7487_first-reps%2F0000%22;rec=0;).
+- **Right** — the NDIS Act 2013, embedded live from the
+  [Federal Register of Legislation](https://www.legislation.gov.au/C2013A00020/latest),
+  tabbed between two compilations:
+  - **Original NDIS legislation** — the Act *before* the 2026 amendments
+    (3 Oct 2024 compilation).
+  - **Proposed Legislation** — the Act *with* the amendments in force
+    (6 May 2026 compilation).
 
-See [`NOTES.md`](NOTES.md) for build state, sourcing, and architecture.
+Light theme by default, with a dark theme toggle. Static site — vanilla
+HTML/CSS/JS, no build step, GitHub Pages-ready.
+
+**Live:** https://clobots.github.io/2026-NDIS-Amemdments/
+
+See [`NOTES.md`](NOTES.md) for architecture, history, and the in-repo data
+retained for the interactions workstream.
 
 ---
 
-> **Accuracy note.** Plain-English summaries are AI-drafted from the Parliamentary
-> Library *Bills Digest* and must be verified before being relied upon. The
-> authoritative text is the [Federal Register of Legislation](https://www.legislation.gov.au/C2026A00041/latest).
+> The embedded pages are the authoritative, official versions, served directly
+> by the Australian Parliament and the Federal Register of Legislation.

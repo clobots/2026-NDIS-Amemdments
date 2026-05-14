@@ -1,13 +1,16 @@
 /* ============================================================================
    NDIS 2026 Amendments — Legislation Comparison Tool
-   Stylesheet
+   Stylesheet — live-iframe shell
 
-   1. Design tokens (light + dark)      7. Act panel (right)
-   2. Reset & base                      8. Legislative text blocks
-   3. App shell & header                9. Interactions: link, highlight, bubble
-   4. Split panes & frames             10. Theme toggle
-   5. Tabs                             11. Scrollbars & utilities
-   6. Bill panel (left)                12. Responsive
+   The two panels are live cross-origin iframes (the Bill from ParlInfo; the
+   NDIS Act 2013 from the Federal Register). This stylesheet covers the shell
+   around them: tokens, header, the split panes, the tabs, the iframe frames,
+   and the theme toggle.
+
+   1. Design tokens (light + dark)      5. Tabs
+   2. Reset & base                      6. Iframe frames
+   3. App shell & header                7. Theme toggle
+   4. Split panes                       8. Utilities & responsive
    ========================================================================== */
 
 /* 1. DESIGN TOKENS ========================================================== */
@@ -34,17 +37,6 @@
   --accent-text:   #ffffff;
   --accent-soft:   #eef2ff;
   --accent-ring:   rgba(79, 70, 229, 0.35);
-
-  /* yellow match highlight (spec) */
-  --highlight-bg:   #fde68a;
-  --highlight-edge: #f59e0b;
-  --highlight-text: #3d2f00;
-
-  /* amendment-kind coding */
-  --kind-amend:      #2563eb;
-  --kind-insert:     #059669;
-  --kind-structural: #8e8e93;
-  --kind-provision:  #7c3aed;
 
   /* elevation */
   --shadow-sm: 0 1px 2px rgba(0,0,0,.04), 0 1px 3px rgba(0,0,0,.06);
@@ -82,15 +74,6 @@
   --accent-soft:   #20203a;
   --accent-ring:   rgba(129, 140, 248, 0.4);
 
-  --highlight-bg:   #7a6320;
-  --highlight-edge: #d9a93b;
-  --highlight-text: #fde6b0;
-
-  --kind-amend:      #60a5fa;
-  --kind-insert:     #34d399;
-  --kind-structural: #98989d;
-  --kind-provision:  #a78bfa;
-
   --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
   --shadow-md: 0 4px 14px rgba(0,0,0,.45);
   --shadow-lg: 0 16px 40px rgba(0,0,0,.6), 0 4px 12px rgba(0,0,0,.4);
@@ -110,7 +93,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow: hidden; /* the panes scroll, not the page */
+  overflow: hidden; /* the iframes scroll, not the page */
 }
 
 /* colour transitions only after first paint, to avoid a theme flash */
@@ -118,8 +101,7 @@ body {
 .theme-ready .pane,
 .theme-ready .app-header,
 .theme-ready .tab,
-.theme-ready .item,
-.theme-ready .section {
+.theme-ready .frame-wrap {
   transition: background-color .25s var(--ease), border-color .25s var(--ease),
               color .25s var(--ease), box-shadow .25s var(--ease);
 }
@@ -170,22 +152,7 @@ button {
 
 .header-spacer { flex: 1; }
 
-/* amendment-kind legend */
-.legend { display: flex; gap: 14px; align-items: center; }
-.legend-item {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11.5px; color: var(--text-2); white-space: nowrap;
-}
-.legend-dot {
-  width: 8px; height: 8px; border-radius: var(--r-pill);
-  background: var(--dot, var(--text-3));
-}
-.legend-item[data-kind="amend"]      { --dot: var(--kind-amend); }
-.legend-item[data-kind="insert"]     { --dot: var(--kind-insert); }
-.legend-item[data-kind="structural"] { --dot: var(--kind-structural); }
-.legend-item[data-kind="provision"]  { --dot: var(--kind-provision); }
-
-/* 4. SPLIT PANES & FRAMES =================================================== */
+/* 4. SPLIT PANES ============================================================ */
 .panes {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -225,21 +192,14 @@ button {
   font-size: 13.5px; font-weight: 600; color: var(--text);
   letter-spacing: -0.01em;
 }
-.pane-meta { font-size: 11.5px; color: var(--text-3); }
 .pane-head .spacer { flex: 1; }
 
 .pane-source {
   font-size: 11.5px; color: var(--text-3);
   display: inline-flex; align-items: center; gap: 4px;
+  white-space: nowrap;
 }
 .pane-source:hover { color: var(--accent); }
-
-.pane-body {
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 28px 32px 56px;
-  scroll-behavior: smooth;
-}
 
 /* 5. TABS =================================================================== */
 .tabs {
@@ -264,316 +224,54 @@ button {
 }
 [data-theme="dark"] .tab.is-active { background: var(--surface-3); }
 
-.tab-panel { display: none; }
-.tab-panel.is-active { display: block; }
-
-/* 6. BILL PANEL (left) ====================================================== */
-.doc-title {
-  font-size: 21px; font-weight: 700; letter-spacing: -0.02em;
-  line-height: 1.3; margin-bottom: 4px;
-}
-.doc-sub  { font-size: 13px; color: var(--text-2); margin-bottom: 2px; }
-.doc-rule { height: 1px; background: var(--border); margin: 22px 0 26px; }
-
-.schedule-head {
-  font-size: 17px; font-weight: 700; letter-spacing: -0.01em;
-  color: var(--text);
-  padding: 22px 0 4px;
-  margin-top: 30px;
-  border-top: 2px solid var(--text);
-}
-.schedule-head:first-of-type { margin-top: 8px; }
-.schedule-head .num { color: var(--accent); }
-.schedule-sub { font-size: 13px; color: var(--text-2); margin-bottom: 14px; }
-
-.part-head {
-  font-size: 14px; font-weight: 650; color: var(--text);
-  margin: 26px 0 2px;
-}
-.division-head {
-  font-size: 12.5px; font-weight: 600; color: var(--text-2);
-  margin: 16px 0 2px;
-}
-.act-ref {
-  font-size: 11.5px; font-style: italic; color: var(--text-3);
-  margin: 4px 0 14px;
-}
-
-/* the amending Act's own ss 1-3 */
-.bill-section { margin: 14px 0; }
-.bill-section .bs-head {
-  font-family: var(--sans); font-size: 13.5px; font-weight: 650;
-  margin-bottom: 4px;
-}
-.bill-section .bs-head .num { font-family: var(--mono); color: var(--text-3); margin-right: 6px; }
-.bill-section p { font-family: var(--serif); font-size: 14px; color: var(--text-2); margin: 4px 0; }
-
-/* an amendment item — the interactive unit */
-.item {
+/* 6. IFRAME FRAMES ========================================================== */
+/* a frame-wrap fills the pane's second grid row: an optional caption strip
+   on top, the iframe filling the rest, a loading overlay above both. */
+.frame-wrap {
   position: relative;
-  margin: 10px 0;
-  padding: 14px 16px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--kind-color, var(--border-strong));
-  border-radius: var(--r-md);
-  scroll-margin-top: 16px;
-}
-.item[data-kind="amend"]          { --kind-color: var(--kind-amend); }
-.item[data-kind="insert-section"] { --kind-color: var(--kind-insert); }
-.item[data-kind="structural"]     { --kind-color: var(--kind-structural); }
-.item[data-kind="provision"]      { --kind-color: var(--kind-provision); }
-
-.item:hover {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   background: var(--surface);
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-md);
-}
-.item.is-active {
-  background: var(--surface);
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-ring), var(--shadow-md);
 }
 
-.item-head {
-  display: flex; align-items: baseline; gap: 8px;
-  margin-bottom: 8px;
-}
-.item-num {
-  font-family: var(--mono); font-size: 11px; font-weight: 600;
-  color: var(--kind-color, var(--text-3));
-  background: var(--surface-3);
-  padding: 2px 6px; border-radius: var(--r-sm);
-  flex-shrink: 0;
-}
-.item-descriptor {
-  font-family: var(--mono); font-size: 12px; font-weight: 500;
-  color: var(--text); letter-spacing: -0.01em;
-}
+/* right-pane tab panels are frame-wraps that show only when active */
+.tab-panel { display: none; }
+.tab-panel.is-active { display: flex; }
 
-.item-content { font-family: var(--serif); font-size: 14px; line-height: 1.6; }
-.item-content p { margin: 5px 0; color: var(--text); }
-.item-content .instruction { color: var(--text-2); }
-.item-content .inserted-head {
-  font-family: var(--sans); font-weight: 650; font-size: 13px;
-  margin: 10px 0 4px; color: var(--text);
-}
-.item-content .inserted-head.division,
-.item-content .inserted-head.subdivision {
-  font-size: 12px; color: var(--text-2);
-}
-
-/* the hover-revealed link to the original Act section */
-.item-link {
-  display: flex; align-items: center; gap: 8px;
-  margin-top: 10px; padding-top: 10px;
-  border-top: 1px dashed var(--border);
-  opacity: 0;
-  transform: translateY(-2px);
-  transition: opacity .18s var(--ease), transform .18s var(--ease);
-}
-.item:hover .item-link,
-.item:focus-within .item-link,
-.item.is-active .item-link { opacity: 1; transform: translateY(0); }
-
-.item-jump {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 12px; font-weight: 550;
-  color: var(--accent);
-  padding: 4px 10px;
-  background: var(--accent-soft);
-  border-radius: var(--r-pill);
-}
-.item-jump:hover { background: var(--accent); color: var(--accent-text); text-decoration: none; }
-.item-jump .arrow { font-size: 13px; }
-
-.item-external {
+.frame-meta {
+  flex: none;
+  padding: 7px 16px;
   font-size: 11.5px; color: var(--text-3);
-  display: inline-flex; align-items: center; gap: 4px;
-}
-.item-external:hover { color: var(--accent); }
-.item-link .spacer { flex: 1; }
-.item-link .no-target { font-size: 11.5px; color: var(--text-3); font-style: italic; }
-
-/* 7. ACT PANEL (right) ====================================================== */
-.chapter-head {
-  font-size: 16px; font-weight: 700; letter-spacing: -0.01em;
-  color: var(--text);
-  margin: 34px 0 2px; padding-top: 18px;
-  border-top: 2px solid var(--text);
-}
-.chapter-head:first-of-type { margin-top: 0; }
-.act-part-head {
-  font-size: 13.5px; font-weight: 650; color: var(--text);
-  margin: 24px 0 2px;
-}
-.act-division-head {
-  font-size: 12.5px; font-weight: 600; color: var(--text-2);
-  margin: 16px 0 2px;
-}
-.act-subdivision-head {
-  font-size: 12px; font-weight: 600; color: var(--text-3);
-  margin: 12px 0 2px;
-}
-.head-num { color: var(--accent); margin-right: 4px; }
-
-.section {
-  margin: 22px 0;
-  padding: 4px 0 4px 14px;
-  border-left: 2px solid transparent;
-  scroll-margin-top: 20px;
-}
-.section-head {
-  display: flex; align-items: baseline; gap: 8px;
-  margin-bottom: 6px;
-}
-.section-num {
-  font-family: var(--mono); font-size: 13px; font-weight: 700;
-  color: var(--accent);
-  flex-shrink: 0;
-}
-.section-heading {
-  font-family: var(--sans); font-size: 14.5px; font-weight: 650;
-  letter-spacing: -0.01em; color: var(--text);
-}
-.section.is-new .section-num::after {
-  content: 'NEW';
-  font-size: 8.5px; font-weight: 700; letter-spacing: .06em;
-  color: var(--kind-insert);
-  background: color-mix(in srgb, var(--kind-insert) 14%, transparent);
-  padding: 1px 4px; border-radius: 3px;
-  margin-left: 6px; vertical-align: middle;
-}
-
-/* section jumped-to from the bill panel */
-.section.is-target {
-  border-left-color: var(--accent);
-}
-@keyframes target-pulse {
-  0%   { background: var(--accent-soft); }
-  100% { background: transparent; }
-}
-.section.is-target.pulse { animation: target-pulse 1.6s var(--ease); }
-
-/* 8. LEGISLATIVE TEXT BLOCKS ================================================ */
-.blk {
-  font-family: var(--serif);
-  font-size: 14.5px;
-  line-height: 1.62;
-  color: var(--text);
-  margin: 5px 0;
-  /* hanging indent so wrapped lines align past the "(1)" / "(a)" marker */
-  padding-left: 1.6em;
-  text-indent: -1.6em;
-}
-.blk--subsection   { padding-left: 1.6em; }
-.blk--subsection2  { padding-left: 3.0em; text-indent: -1.4em; }
-.blk--paragraph    { padding-left: 3.0em; text-indent: -1.4em; }
-.blk--paragraphsub { padding-left: 4.4em; text-indent: -1.4em; }
-.blk--Definition   { padding-left: 1.6em; }
-
-.blk--SubsectionHead {
-  font-family: var(--sans); font-weight: 650; font-size: 12.5px;
-  color: var(--text-2);
-  padding-left: 0; text-indent: 0;
-  margin: 12px 0 2px;
-}
-.blk--notetext {
-  font-size: 12.5px; color: var(--text-2);
   background: var(--surface-2);
-  border-left: 2px solid var(--border-strong);
-  padding: 6px 10px 6px 12px; text-indent: 0;
-  border-radius: 0 var(--r-sm) var(--r-sm) 0;
-  margin: 6px 0 6px 1.6em;
-}
-.blk--Penalty {
-  font-family: var(--sans); font-size: 12.5px; font-weight: 600;
-  color: var(--text);
-  background: color-mix(in srgb, var(--kind-provision) 9%, var(--surface));
-  padding: 4px 10px; text-indent: 0;
-  border-radius: var(--r-sm);
-  margin: 6px 0 6px 1.6em;
-  display: inline-block;
-}
-.blk--Tabletext, .blk--Tablea, .blk--Tableb {
-  font-family: var(--sans); font-size: 12.5px; color: var(--text-2);
-  padding-left: 1.6em; text-indent: 0; margin: 2px 0;
-}
-.blk--TableHeading {
-  font-family: var(--sans); font-size: 11.5px; font-weight: 650;
-  color: var(--text-3); text-indent: 0; padding-left: 1.6em;
-  margin-top: 8px;
+  border-bottom: 1px solid var(--border);
 }
 
-/* 9. INTERACTIONS: highlight + plain-English bubble ========================= */
-
-/* yellow match highlight (spec) */
-mark.match {
-  background: var(--highlight-bg);
-  color: var(--highlight-text);
-  box-shadow: inset 0 -1px 0 var(--highlight-edge);
-  border-radius: 2px;
-  padding: 0 1px;
-}
-
-/* a paragraph that carries a plain-English translation */
-.blk.has-pe {
-  cursor: help;
-  border-bottom: 1px dotted color-mix(in srgb, var(--accent) 45%, transparent);
-}
-.blk.has-pe:hover { background: var(--accent-soft); border-radius: var(--r-sm); }
-
-/* the bubble itself */
-.pe-bubble {
-  position: fixed;
-  z-index: 50;
-  max-width: 380px;
+.frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
   background: var(--surface);
-  color: var(--text);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow-lg);
-  padding: 12px 14px 10px;
-  font-family: var(--sans);
-  opacity: 0;
-  transform: translateY(4px) scale(.98);
-  transform-origin: bottom center;
-  transition: opacity .15s var(--ease), transform .15s var(--ease);
-  pointer-events: none;
 }
-.pe-bubble.is-visible { opacity: 1; transform: translateY(0) scale(1); }
-.pe-bubble::after { /* pointer */
-  content: '';
+
+.frame-loading {
   position: absolute;
-  left: var(--arrow-x, 50%);
-  bottom: -6px;
-  width: 11px; height: 11px;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px; color: var(--text-3);
   background: var(--surface);
-  border-right: 1px solid var(--border-strong);
-  border-bottom: 1px solid var(--border-strong);
-  transform: translateX(-50%) rotate(45deg);
+  z-index: 5;
 }
-.pe-bubble.below::after {
-  bottom: auto; top: -6px;
-  transform: translateX(-50%) rotate(225deg);
+.frame-loading.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s var(--ease);
 }
-.pe-label {
-  font-size: 10px; font-weight: 700; letter-spacing: .07em;
-  text-transform: uppercase; color: var(--accent);
-  display: flex; align-items: center; gap: 5px;
-  margin-bottom: 5px;
-}
-.pe-label .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-.pe-text { font-size: 13px; line-height: 1.5; color: var(--text); }
-.pe-flag {
-  margin-top: 8px; padding-top: 7px;
-  border-top: 1px solid var(--border);
-  font-size: 10.5px; color: var(--text-3);
-  display: flex; align-items: center; gap: 5px;
-}
-.pe-bubble.pending .pe-text { color: var(--text-3); font-style: italic; }
 
-/* 10. THEME TOGGLE ========================================================== */
+/* 7. THEME TOGGLE =========================================================== */
 .theme-toggle {
   display: inline-flex; align-items: center; justify-content: center;
   width: 34px; height: 34px;
@@ -589,50 +287,26 @@ mark.match {
 [data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
 [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
 
-/* 11. SCROLLBARS & UTILITIES ================================================ */
-.pane-body { scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
-.pane-body::-webkit-scrollbar { width: 10px; }
-.pane-body::-webkit-scrollbar-thumb {
-  background: var(--border-strong);
-  border-radius: var(--r-pill);
-  border: 3px solid var(--surface);
-}
-.pane-body::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
-
-.app-loading {
-  position: fixed; inset: 0;
-  display: grid; place-items: center;
-  background: var(--bg);
-  z-index: 100;
-  font-size: 13px; color: var(--text-3);
-}
-.app-loading.is-hidden { opacity: 0; pointer-events: none; transition: opacity .3s; }
-
+/* 8. UTILITIES & RESPONSIVE ================================================= */
 .visually-hidden {
   position: absolute; width: 1px; height: 1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
 
-/* 12. RESPONSIVE ============================================================ */
 @media (max-width: 940px) {
   body { overflow: auto; }
   .app { height: auto; min-height: 100vh; }
-  .panes {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .pane { height: 78vh; }
-  .legend { display: none; }
+  .panes { grid-template-columns: 1fr; gap: 12px; }
+  .pane { height: 84vh; }
   .brand-sub { display: none; }
 }
 
 @media (max-width: 560px) {
-  .pane-body { padding: 20px 18px 44px; }
   .app-header { gap: 10px; padding: 0 14px; }
-  .pane { height: 82vh; }
+  .pane { height: 88vh; }
+  .pane-title { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-  .pane-body { scroll-behavior: auto; }
 }

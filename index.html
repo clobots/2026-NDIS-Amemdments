@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NDIS 2026 Amendments — Legislation Comparison</title>
-  <meta name="description" content="Side-by-side comparison of the NDIS Amendment (Integrity and Safeguarding) Act 2026 against the National Disability Insurance Scheme Act 2013 it amends — with plain-English translations." />
+  <meta name="description" content="The NDIS Amendment (Integrity and Safeguarding) Bill alongside the National Disability Insurance Scheme Act 2013 it amends — live from the official sources." />
 
   <!-- set theme before first paint to avoid a flash -->
   <script>
@@ -24,8 +24,6 @@
 </head>
 <body>
 
-  <div class="app-loading" id="app-loading">Loading legislation…</div>
-
   <div class="app">
 
     <!-- ===================== HEADER ===================== -->
@@ -36,13 +34,6 @@
       </div>
 
       <span class="header-spacer"></span>
-
-      <div class="legend" aria-label="Amendment type key">
-        <span class="legend-item" data-kind="amend"><span class="legend-dot"></span>Amends a section</span>
-        <span class="legend-item" data-kind="insert"><span class="legend-dot"></span>Inserts new</span>
-        <span class="legend-item" data-kind="structural"><span class="legend-dot"></span>Structural</span>
-        <span class="legend-item" data-kind="provision"><span class="legend-dot"></span>Provision</span>
-      </div>
 
       <button class="theme-toggle" id="theme-toggle" type="button"
               aria-label="Toggle dark mode" title="Toggle light / dark theme">
@@ -61,20 +52,25 @@
     <!-- ===================== PANES ===================== -->
     <main class="panes">
 
-      <!-- LEFT — the amending Act -->
-      <section class="pane pane--bill" aria-label="Amending Act">
+      <!-- LEFT — the amending Bill, live from ParlInfo -->
+      <section class="pane pane--bill" aria-label="Amending Bill">
         <div class="pane-head">
-          <span class="pane-label">Amending Act</span>
-          <span class="pane-title" id="bill-title">NDIS Amendment (Integrity &amp; Safeguarding) Act 2026</span>
+          <span class="pane-label">Amending Bill</span>
+          <span class="pane-title">NDIS Amendment (Integrity &amp; Safeguarding) Bill</span>
           <span class="spacer"></span>
-          <a class="pane-source" id="bill-source"
-             href="https://www.legislation.gov.au/C2026A00041/latest"
-             target="_blank" rel="noopener">Federal Register &#8599;</a>
+          <a class="pane-source" id="bill-pop"
+             href="https://parlinfo.aph.gov.au/parlInfo/search/display/display.w3p;query=Id%3A%22legislation%2Fbills%2Fr7487_first-reps%2F0000%22;rec=0;"
+             target="_blank" rel="noopener">Open on ParlInfo &#8599;</a>
         </div>
-        <div class="pane-body" id="bill-body" aria-live="polite"></div>
+        <div class="frame-wrap">
+          <div class="frame-loading" id="bill-loading">Loading the bill from ParlInfo&hellip;</div>
+          <iframe class="frame" id="bill-frame" title="NDIS Amendment (Integrity and Safeguarding) Bill — ParlInfo"
+                  src="https://parlinfo.aph.gov.au/parlInfo/search/display/display.w3p;query=Id%3A%22legislation%2Fbills%2Fr7487_first-reps%2F0000%22;rec=0;"
+                  referrerpolicy="no-referrer"></iframe>
+        </div>
       </section>
 
-      <!-- RIGHT — the NDIS Act 2013, tabbed -->
+      <!-- RIGHT — the NDIS Act 2013, tabbed, live from the Federal Register -->
       <section class="pane pane--act" aria-label="National Disability Insurance Scheme Act 2013">
         <div class="pane-head">
           <div class="tabs" role="tablist" aria-label="Legislation version">
@@ -88,39 +84,42 @@
             </button>
           </div>
           <span class="spacer"></span>
-          <span class="pane-meta" id="act-meta"></span>
-          <a class="pane-source" id="act-source"
-             href="https://www.legislation.gov.au/C2013A00020/latest"
-             target="_blank" rel="noopener">Federal Register &#8599;</a>
+          <a class="pane-source" id="act-pop"
+             href="https://www.legislation.gov.au/C2013A00020/2024-10-03"
+             target="_blank" rel="noopener">Open on Federal Register &#8599;</a>
         </div>
-        <div class="pane-body" id="act-body">
-          <div class="tab-panel is-active" id="panel-original" role="tabpanel"
-               aria-labelledby="tab-original"></div>
-          <div class="tab-panel" id="panel-proposed" role="tabpanel"
-               aria-labelledby="tab-proposed" hidden></div>
+
+        <!-- Tab 1 — the Act before the amendments (3 Oct 2024 compilation) -->
+        <div class="frame-wrap tab-panel is-active" id="panel-original" role="tabpanel"
+             aria-labelledby="tab-original">
+          <div class="frame-meta">NDIS Act 2013 &mdash; compilation 3 Oct 2024 (before the 2026 amendments)</div>
+          <div class="frame-loading" id="orig-loading">Loading the original Act from the Federal Register&hellip;</div>
+          <iframe class="frame" id="orig-frame" title="NDIS Act 2013 — pre-amendment compilation"
+                  src="https://www.legislation.gov.au/C2013A00020/2024-10-03"
+                  referrerpolicy="no-referrer"></iframe>
+        </div>
+
+        <!-- Tab 2 — the Act with the amendments in force (6 May 2026 compilation). Lazy-loaded. -->
+        <div class="frame-wrap tab-panel" id="panel-proposed" role="tabpanel"
+             aria-labelledby="tab-proposed" hidden>
+          <div class="frame-meta">NDIS Act 2013 &mdash; compilation 6 May 2026 (the 2026 amendments in force)</div>
+          <div class="frame-loading" id="prop-loading">Loading the amended Act from the Federal Register&hellip;</div>
+          <iframe class="frame" id="prop-frame" title="NDIS Act 2013 — post-amendment compilation"
+                  data-src="https://www.legislation.gov.au/C2013A00020/2026-05-06"
+                  referrerpolicy="no-referrer"></iframe>
         </div>
       </section>
 
     </main>
   </div>
 
-  <!-- ===================== PLAIN-ENGLISH BUBBLE ===================== -->
-  <div class="pe-bubble" id="pe-bubble" role="tooltip" aria-hidden="true">
-    <div class="pe-label"><span class="dot"></span>Plain English</div>
-    <div class="pe-text" id="pe-text"></div>
-    <div class="pe-flag">
-      <span aria-hidden="true">&#9888;</span>
-      AI-drafted summary &mdash; verify before relying on it
-    </div>
-  </div>
-
   <noscript>
     <div style="padding:40px;max-width:640px;margin:0 auto;font-family:sans-serif">
       <h1>JavaScript required</h1>
-      <p>This tool renders the full text of two pieces of legislation and wires them
-      together interactively, which needs JavaScript enabled. The underlying
-      legislation is available verbatim on the
-      <a href="https://www.legislation.gov.au/C2026A00041/latest">Federal Register of Legislation</a>.</p>
+      <p>This page embeds the live legislation and needs JavaScript for tab switching.
+      The underlying documents are available directly:
+      <a href="https://parlinfo.aph.gov.au/parlInfo/search/display/display.w3p;query=Id%3A%22legislation%2Fbills%2Fr7487_first-reps%2F0000%22;rec=0;">the Bill on ParlInfo</a>
+      and <a href="https://www.legislation.gov.au/C2013A00020/latest">the NDIS Act 2013 on the Federal Register</a>.</p>
     </div>
   </noscript>
 

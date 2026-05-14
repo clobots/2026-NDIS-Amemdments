@@ -1,7 +1,8 @@
-/* Headless render + interaction smoke test for the comparison tool.
-   Loads index.html into jsdom, stubs fetch with the local data files, runs the
-   real js/app.js, then asserts the documents rendered and the core
-   interactions (tab switch, hover-link jump, highlight, theme toggle) work.
+/* Headless smoke test for the live-iframe shell.
+   Loads index.html into jsdom, runs the real js/app.js, and asserts the shell
+   structure and interactions (tab switch, lazy-load, theme toggle) work.
+   It does NOT load the cross-origin iframe content — that only happens in a
+   real browser — it checks the wiring around the frames.
 
    Run:  node sources/render_test.js      (needs: npm install --no-save jsdom)
    Exit: 0 = pass, 1 = fail.
@@ -20,82 +21,57 @@ function check(label, cond, detail) {
 }
 
 (async function () {
-  // runScripts:'dangerously' lets us execute app.js via an injected <script>;
-  // the page's own <script src> tags are not fetched (no resources:'usable'),
-  // so the engine only runs once, after our stubs are in place.
   const dom = new JSDOM(read('index.html'), {
     url: 'http://localhost/',
     runScripts: 'dangerously',
-    pretendToBeVisual: true,            // provides requestAnimationFrame
+    pretendToBeVisual: true,
+    resources: undefined,            // do NOT fetch the iframe sources
   });
   const { window } = dom;
   const { document } = window;
-
-  // ---- stubs the engine expects from a real browser ----
-  window.fetch = (url) => {
-    const file = path.join(ROOT, url);
-    const exists = fs.existsSync(file);
-    return Promise.resolve({
-      ok: exists,
-      status: exists ? 200 : 404,
-      json: () => Promise.resolve(JSON.parse(fs.readFileSync(file, 'utf8'))),
-    });
-  };
-  window.Element.prototype.scrollIntoView = function () {};
   if (!window.matchMedia) window.matchMedia = () => ({ matches: false });
 
-  // ---- run the real engine ----
   const script = document.createElement('script');
   script.textContent = read('js/app.js');
   document.body.appendChild(script);
-  await new Promise((r) => setTimeout(r, 400));   // let the async init() settle
+  await new Promise((r) => setTimeout(r, 100));
 
-  console.log('\nrender:');
-  const billBody = document.getElementById('bill-body');
-  const pOrig = document.getElementById('panel-original');
-  const pProp = document.getElementById('panel-proposed');
+  console.log('\nstructure:');
+  const billFrame = document.getElementById('bill-frame');
+  const origFrame = document.getElementById('orig-frame');
+  const propFrame = document.getElementById('prop-frame');
 
-  check('loading overlay hidden after init',
-    document.getElementById('app-loading').classList.contains('is-hidden'));
-  check('bill panel rendered a doc title',
-    !!billBody.querySelector('.doc-title'));
-
-  const items = billBody.querySelectorAll('.item');
-  check('bill rendered 116 items', items.length === 116, 'got ' + items.length);
-
-  check('original tab rendered 324 sections',
-    pOrig.querySelectorAll('.section').length === 324,
-    'got ' + pOrig.querySelectorAll('.section').length);
-  check('proposed tab rendered 338 sections',
-    pProp.querySelectorAll('.section').length === 338,
-    'got ' + pProp.querySelectorAll('.section').length);
-  check('proposed tab marks new sections',
-    pProp.querySelectorAll('.section.is-new').length > 5);
-  check('every item carries a data-kind',
-    [...items].every((i) => i.getAttribute('data-kind')));
-  check('section 73B exists in both tabs',
-    !!document.getElementById('orig-s73B') && !!document.getElementById('prop-s73B'));
+  check('left pane embeds the Bill from parlinfo.aph.gov.au',
+    !!billFrame && /parlinfo\.aph\.gov\.au/.test(billFrame.getAttribute('src')));
+  check('Original tab embeds the 2024-10-03 NDIS Act compilation',
+    !!origFrame && /legislation\.gov\.au\/C2013A00020\/2024-10-03/.test(origFrame.getAttribute('src')));
+  check('Proposed iframe holds its URL in data-src (lazy), src not yet set',
+    !!propFrame && !propFrame.getAttribute('src') &&
+    /legislation\.gov\.au\/C2013A00020\/2026-05-06/.test(propFrame.getAttribute('data-src')));
+  check('both tabs present', !!document.getElementById('tab-original') &&
+    !!document.getElementById('tab-proposed'));
+  check('each frame has a loading overlay',
+    !!document.getElementById('bill-loading') &&
+    !!document.getElementById('orig-loading') &&
+    !!document.getElementById('prop-loading'));
 
   console.log('\ninteractions:');
-  // hover-link jump: click item 33's jump button (targets s73B in original)
-  const item33 = [...items].find(
-    (i) => i.querySelector('.item-num').textContent === '33');
-  const jump = item33 && item33.querySelector('.item-jump[data-section="73B"]');
-  check('item 33 has a jump button to s73B', !!jump);
-  if (jump) {
-    jump.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-    check('jump marked s73B as target',
-      document.getElementById('orig-s73B').classList.contains('is-target'));
-    check('jump marked item 33 active', item33.classList.contains('is-active'));
-  }
-
-  // tab switch
+  // tab switch -> proposed
   document.getElementById('tab-proposed').dispatchEvent(
     new window.MouseEvent('click', { bubbles: true }));
-  check('tab switch activates proposed panel',
-    pProp.classList.contains('is-active') && !pOrig.classList.contains('is-active'));
+  check('switching to Proposed activates its panel',
+    document.getElementById('panel-proposed').classList.contains('is-active') &&
+    !document.getElementById('panel-original').classList.contains('is-active'));
+  check('switching to Proposed lazy-loads its iframe src',
+    propFrame.getAttribute('src') === propFrame.getAttribute('data-src'));
+  check('"open on Federal Register" link follows the active tab',
+    /2026-05-06/.test(document.getElementById('act-pop').getAttribute('href')));
+
+  // tab switch back -> original
   document.getElementById('tab-original').dispatchEvent(
     new window.MouseEvent('click', { bubbles: true }));
+  check('switching back activates the Original panel',
+    document.getElementById('panel-original').classList.contains('is-active'));
 
   // theme toggle
   const before = document.documentElement.getAttribute('data-theme');
@@ -104,38 +80,6 @@ function check(label, cond, detail) {
   check('theme toggle flips data-theme',
     document.documentElement.getAttribute('data-theme') !== before);
 
-  // yellow highlight: pick a real item whose target section contains its quote
-  const bill = JSON.parse(read('data/bill.json'));
-  const itemWithQuote = bill.nodes.find((n) =>
-    n.type === 'item' && n.target && n.target.section &&
-    (n.target.quotes || []).length);
-  if (itemWithQuote) {
-    const node = document.getElementById(itemWithQuote.id);
-    node.querySelector('.item-jump').dispatchEvent(
-      new window.MouseEvent('click', { bubbles: true }));
-    const sec = document.getElementById('orig-s' + itemWithQuote.target.section);
-    const marks = sec ? sec.querySelectorAll('mark.match').length : 0;
-    check('quote highlight applied in target section (item ' + itemWithQuote.num + ')',
-      marks > 0, marks + ' marks');
-  } else {
-    console.log('  --   no item with quotes to test highlight (skipped)');
-  }
-
-  // plain-English bubble
-  console.log('\nplain-English:');
-  document.getElementById('tab-proposed').dispatchEvent(
-    new window.MouseEvent('click', { bubbles: true }));
-  const peBlocks = pProp.querySelectorAll('.blk.has-pe');
-  check('proposed tab marks blocks that carry a translation',
-    peBlocks.length > 0, peBlocks.length + ' has-pe blocks');
-  if (peBlocks.length) {
-    peBlocks[0].dispatchEvent(new window.MouseEvent('mouseover', { bubbles: true }));
-    const bub = document.getElementById('pe-bubble');
-    check('hovering a translated paragraph shows the plain-English bubble',
-      bub.classList.contains('is-visible') &&
-      document.getElementById('pe-text').textContent.length > 0);
-  }
-
-  console.log('\n' + (failures ? failures + ' FAILURE(S)' : 'all render tests passed'));
+  console.log('\n' + (failures ? failures + ' FAILURE(S)' : 'all shell tests passed'));
   process.exit(failures ? 1 : 0);
 })().catch((e) => { console.error('test crashed:', e); process.exit(1); });

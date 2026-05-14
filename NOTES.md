@@ -2,7 +2,52 @@
 
 Handoff / build-state doc. Read this first when resuming.
 
-## What this is
+## ⚠️ ARCHITECTURE PIVOT — read this first
+
+The **live site is now a two-live-iframe shell**, not the re-rendered
+"annotated" app described in the rest of this file.
+
+**What happened.** The original build re-rendered the legislation text in-app
+because I believed parlinfo blocked iframe embedding. That belief was wrong —
+I only ever tested *fetching* parlinfo (which 403s on bot user-agents); I never
+tested *framing* it. A proper header check showed **neither parlinfo nor
+legislation.gov.au sends `X-Frame-Options` or a CSP `frame-ancestors`** — both
+embed fine. The user confirmed framing works in Chrome and chose to make both
+panels live iframes.
+
+**Current live site (`index.html` + `js/app.js` + `css/app.css`):**
+- **Left** — live iframe of the Bill on ParlInfo (the user's original spec URL).
+- **Right** — tabbed live iframes of the NDIS Act 2013 on the Federal Register:
+  *Original* = the 2024-10-03 compilation (pre-amendment); *Proposed* = the
+  2026-05-06 compilation (amendments in force). Proposed iframe is lazy-loaded
+  on first tab activation.
+- `js/app.js` now only does tab switching, lazy-load, per-frame loading
+  overlays, and the theme toggle. **It cannot reach inside the iframes** —
+  cross-origin same-origin policy. No DOM injection, highlighting or scroll-sync
+  is possible against a live cross-origin frame.
+
+**The interactions workstream.** The user will guide the development of the
+hover-links / highlighting / plain-English-bubble interactions separately,
+on top of (or alongside) the live-iframe shell. Everything that work needs is
+**retained in the repo**:
+- `data/*.json` — the parsed bill + both Act compilations, and the **1,276
+  plain-English translations** (`data/plain-english.json`). Expensive content;
+  do not delete.
+- `sources/build_data.py`, `sources/validate_data.py` — the data pipeline.
+- The full **re-rendered "annotated" engine** (the old `index.html`,
+  `js/app.js`, `css/app.css` with rendering, hover-link jump, yellow
+  highlighting and the plain-English bubble mechanism) is preserved in git
+  history at commit **`4812870`** ("Add plain-English translations: batch 24").
+  Recover it with `git show 4812870:js/app.js` etc. if the interactions work
+  reuses it.
+
+The rest of this document describes that **annotated engine** — still accurate
+as a record of it, and as background for the interactions workstream — but it
+is **not** what the live site currently runs.
+
+---
+
+## What the annotated engine was (historical / for interactions workstream)
 
 A frame-driven web tool for advocacy: side-by-side comparison of the **NDIS
 Amendment (Integrity and Safeguarding) Act 2026** against the **National
@@ -32,9 +77,11 @@ Layout:
 - **Plain-English bubbles:** AI-drafted from the Parliamentary Library Bills
   Digest; each must be visibly flagged "AI-drafted — verify before relying on it."
 - **Stack:** static vanilla HTML/CSS/JS, no build step, GitHub Pages-ready.
-  parlinfo / austlii block both fetching and iframe embedding, so all documents
-  are re-rendered in-app from local data, with deep-links out to the official
-  source.
+  (Correction — see the pivot note above: parlinfo and legislation.gov.au
+  *do* allow iframe embedding; only automated *fetching* of parlinfo/austlii
+  is bot-blocked. The annotated engine still re-rendered from local data so it
+  could inject the interactive layer, which a live cross-origin iframe cannot
+  host.)
 
 ## The bill
 
@@ -188,13 +235,16 @@ link so the basis is transparent.
 
 ## Testing
 
-- `sources/validate_data.py` — data-contract + cross-reference check; confirms
-  every hover-link target resolves to a real section. Run after `build_data.py`.
-- `sources/render_test.js` — headless jsdom render + interaction smoke test
-  (14 checks: render counts, jump, highlight, tab switch, theme).
+- `sources/render_test.js` — headless jsdom smoke test of the **live-iframe
+  shell**: iframe srcs, lazy-load of the Proposed frame, tab switching, the
+  "open on Federal Register" link following the active tab, theme toggle.
   Needs `npm install --no-save jsdom`; run `node sources/render_test.js`.
-- Local preview: `python3 -m http.server` then open the printed URL (the app
-  fetches JSON, so `file://` will not work).
+  (It does not load the cross-origin iframe content — that only happens in a
+  real browser.)
+- `sources/validate_data.py` — data-contract + cross-reference check for the
+  retained `data/*.json` (the interactions workstream's inputs); confirms every
+  bill item's target resolves and every plain-english key matches a real block.
+- Local preview: `python3 -m http.server` then open the printed URL.
 
 ## Plain-English data model
 
