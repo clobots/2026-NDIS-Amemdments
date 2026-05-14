@@ -234,9 +234,11 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
   - ✅ Batch 7 — s56 written notice of requirement + s57 refusal to comply,
     before + after (the new power to shorten info-gathering deadlines in
     urgent cases; a civil penalty added to s57) (42).
-  - ⏭ Remaining: the other affected sections in the checklist above —
-    e.g. s73F info-gathering for registered providers, s73ZDA provider
-    register, s73ZA whistleblower-eligibility changes, s45/45A/47A NDIA
-    operations, and the unchanged tail of s73ZN ((3)–(9)). All lower priority
-    than the batches above; the engine renders them the moment keys are
-    added to `data/plain-english.json`.
+  - ✅ Batch 8 — s73F registration conditions (before + after; the new
+    shorter-period power + "or documents") and the new s73ZDA NDIS Provider
+    Register (structural blocks) (35).
+  - ⏭ Remaining: s73ZA whistleblower-eligibility wording changes, the
+    s45/45A/47A NDIA operational changes (electronic claims, plan variation),
+    and the unchanged tail of s73ZN ((3)–(9)) + s73ZDA field lists. All lower
+    priority; the engine renders them the moment keys are added to
+    `data/plain-english.json`.
