@@ -252,8 +252,20 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
   - ✅ Batch 12 — completed s73ZDA: all register field-list items (34).
   - ✅ Batch 13 — completed s45 & s45A: the unchanged payment-mechanics and
     claim-timing tails, both tabs (61).
+  - ✅ Batch 14 — s47A shared core b2–b65 (the permitted-variation lists) (64).
+  - ✅ Batch 15 — s47A version-specific tail b67–b110 / b71–b114 (CEO
+    requirements, decision deadlines, when a variation takes effect) (88).
 
-  **Every section the bill touches is fully covered end to end**, except one:
-  - ⏭ s47A — the ~100 unchanged plan-variation-mechanics blocks (the two
-    *changed* blocks, the "avoid doubt" clause, were done in batch 9). Dense
-    pre-existing funding law; remaining optional polish.
+  **Scope correction:** the bill touches **57 NDIS Act sections** in total,
+  not the ~15 the priority list first tracked. The 13 substantively-rewritten
+  sections (cooling-off, registration/banning/anti-promotion offences,
+  whistleblower, info-gathering, the register, claims, plan variation) are
+  **fully covered, both tabs, end to end** — 671 translations.
+  - ⏭ Remaining ~44 sections are touched only by *small* amendments — a
+    heading reword, a repealed note, a penalty-figure change, a cross-
+    reference update — but each still has unchanged surrounding text
+    (~1,832 blocks). Plan: per section, translate the *changed* block(s)
+    plus a section-opener anchor; the dense unchanged tails of the very
+    large reference sections (s9 definitions, s99 and s209 tables, s201A)
+    are lowest priority. Coverage is checked by the script at the end of
+    `validate_data.py`'s sibling check — see the inline coverage probe.
