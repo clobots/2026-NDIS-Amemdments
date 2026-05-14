@@ -181,9 +181,12 @@
         sec.appendChild(sh);
 
         n.blocks.forEach(function (b) {
-          var cls = 'blk blk--' + b.kind + (PE[b.id] ? ' has-pe' : '');
-          var bp = el('p', cls, b.text);
+          // a version-specific translation wins; a bare blockId is a shared
+          // translation usable in both tabs (for sections the bill leaves alone)
+          var pe = PE[version + ':' + b.id] || PE[b.id];
+          var bp = el('p', 'blk blk--' + b.kind + (pe ? ' has-pe' : ''), b.text);
           bp.setAttribute('data-pe-id', b.id);
+          bp.setAttribute('data-pe-ver', version);
           sec.appendChild(bp);
         });
         frag.appendChild(sec);
@@ -348,7 +351,8 @@
     actBody.addEventListener('mouseover', function (e) {
       var blk = e.target.closest('.blk.has-pe');
       if (!blk || !actBody.contains(blk)) return;
-      var t = PE[blk.getAttribute('data-pe-id')];
+      var id = blk.getAttribute('data-pe-id'), ver = blk.getAttribute('data-pe-ver');
+      var t = PE[ver + ':' + id] || PE[id];
       if (t) showBubble(blk, t);
     });
     actBody.addEventListener('mouseout', function (e) {

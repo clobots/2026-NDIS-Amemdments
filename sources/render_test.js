@@ -121,6 +121,21 @@ function check(label, cond, detail) {
     console.log('  --   no item with quotes to test highlight (skipped)');
   }
 
+  // plain-English bubble
+  console.log('\nplain-English:');
+  document.getElementById('tab-proposed').dispatchEvent(
+    new window.MouseEvent('click', { bubbles: true }));
+  const peBlocks = pProp.querySelectorAll('.blk.has-pe');
+  check('proposed tab marks blocks that carry a translation',
+    peBlocks.length > 0, peBlocks.length + ' has-pe blocks');
+  if (peBlocks.length) {
+    peBlocks[0].dispatchEvent(new window.MouseEvent('mouseover', { bubbles: true }));
+    const bub = document.getElementById('pe-bubble');
+    check('hovering a translated paragraph shows the plain-English bubble',
+      bub.classList.contains('is-visible') &&
+      document.getElementById('pe-text').textContent.length > 0);
+  }
+
   console.log('\n' + (failures ? failures + ' FAILURE(S)' : 'all render tests passed'));
   process.exit(failures ? 1 : 0);
 })().catch((e) => { console.error('test crashed:', e); process.exit(1); });

@@ -1,1 +1,31 @@
-{}
+{
+ "_about": "Plain-English translations keyed by '<version>:<blockId>' (version-specific) or a bare '<blockId>' (shared across both tabs). AI-drafted from the Parliamentary Library Bills Digest and the text itself — verify before relying on them. Built incrementally; see NOTES.md for priority order.",
+
+ "original:s29-b1": "Lists the situations in which someone stops being an NDIS participant.",
+ "original:s29-b2": "The person has died.",
+ "original:s29-b3": "The person moves permanently into residential aged care, or starts permanent home care, and this first happens after they turn 65.",
+ "original:s29-b4": "The CEO formally revokes the person's participant status under the revocation rules in sections 30 and 30A.",
+ "original:s29-b5": "The person tells the CEO in writing that they no longer want to be a participant. Under the original Act this took effect immediately — there was no cooling-off period and no safeguards around the decision.",
+ "original:s29-b6": "These aged-care terms carry the same meaning they have in the Aged Care Act 1997.",
+ "original:s29-b7": "Once someone stops being a participant, the NDIS will not pay for supports bought or provided after that point.",
+ "original:s29-b8": "The NDIS rules can set out exactly when a support counts as bought or delivered before, versus after, someone leaves the scheme — which decides what still gets paid.",
+
+ "proposed:s29-b1": "Lists the situations in which someone stops being an NDIS participant.",
+ "proposed:s29-b2": "The person has died.",
+ "proposed:s29-b3": "The person permanently starts ongoing funded aged-care services (other than a specialist aged-care program), first happening after they turn 65. The wording was modernised to match current aged-care terms.",
+ "proposed:s29-b4": "The CEO formally revokes the person's participant status under the revocation rules in sections 30 and 30A.",
+ "proposed:s29-b5": "CHANGED: the person is treated as having withdrawn under the new section 29A — i.e. they asked to leave and the 90-day cooling-off period ended without them cancelling. This replaces the old 'notify in writing and you're out immediately' rule with a safeguarded process.",
+ "proposed:s29-b6": "Once someone stops being a participant, the NDIS will not pay for supports bought or provided after that point.",
+ "proposed:s29-b7": "The NDIS rules can set out exactly when a support counts as bought or delivered before, versus after, someone leaves the scheme — which decides what still gets paid.",
+
+ "proposed:s29A-b1": "NEW SECTION. A participant can ask to leave the NDIS, in whatever way the CEO has approved (for example, a form or an online process).",
+ "proposed:s29A-b2": "Once the CEO receives that request, they must promptly send the person a written notice that has to include the things listed below.",
+ "proposed:s29A-b3": "The notice must explain what leaving the NDIS would actually mean for the person.",
+ "proposed:s29A-b4": "The notice must tell the person how to change their mind and cancel the request.",
+ "proposed:s29A-b5": "The notice must explain that the person is only treated as having left once a set 'cooling-off period' ends — and only if they have not cancelled by then.",
+ "proposed:s29A-b6": "The core new safeguard: the cooling-off period must be at least 90 days, counted from the day the notice is given — a guaranteed window to reconsider.",
+ "proposed:s29A-b7": "The CEO can extend the cooling-off period, and can do so more than once, giving the person even longer to decide.",
+ "proposed:s29A-b8": "If the person has not cancelled by the time the cooling-off period ends, that is the moment they are treated as having left the scheme — not before.",
+ "proposed:s29A-b9": "Even if the person has a correspondence nominee who normally receives their mail, any notice about leaving the scheme must also go directly to the participant themselves.",
+ "proposed:s29A-b10": "If the person has a plan nominee, that nominee must also be sent any notice about the person leaving — so the people supporting them are kept informed."
+}

@@ -196,14 +196,31 @@ link so the basis is transparent.
 - Local preview: `python3 -m http.server` then open the printed URL (the app
   fetches JSON, so `file://` will not work).
 
+## Plain-English data model
+
+`data/plain-english.json` is keyed by either:
+- `<version>:<blockId>` — version-specific (e.g. `proposed:s29-b5`). Required
+  for sections the bill changes, because a block id can point to different
+  text in each tab (e.g. removing a Note shifts every block below it).
+- `<blockId>` — a shared translation, used in both tabs (for sections the bill
+  leaves untouched). The engine tries the version-specific key first.
+
+Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
+
 ## Status
+
+**Live:** https://clobots.github.io/2026-NDIS-Amemdments/
 
 - ✅ **Task 1 — Sourcing.** Three full documents extracted to clean text.
 - ✅ **Task 2 — Parse to JSON.** `build_data.py` + `data/*.json`, validated.
 - ✅ **Task 3 — Design system.** `css/app.css`.
 - ✅ **Task 4 — HTML shell.** `index.html`.
-- ✅ **Task 5 — JS engine.** `js/app.js`; all 14 render tests pass.
-- 🔄 **Task 6 — Integrate / test / commit / deploy.** In progress.
-- ⏭ **Task 7 — Plain-English translations.** `data/plain-english.json` is an
-  empty stub; the bubble mechanism is live and renders as soon as keys are
-  added. Priority order above.
+- ✅ **Task 5 — JS engine.** `js/app.js`; all render tests pass.
+- ✅ **Task 6 — Integrate / test / deploy.** Committed, pushed, GitHub Pages
+  live and verified (all assets 200).
+- 🔄 **Task 7 — Plain-English translations.** Incremental.
+  - ✅ Batch 1 — Sch 2 Pt 1: s29 (before + after) + new s29A cooling-off (25).
+  - ⏭ Batch 2 — item 33 / s73B (registration offences).
+  - ⏭ Batch 3 — item 80 / s73ZN (banning-order expansion).
+  - ⏭ Batch 4 — Sch 1 Pt 4 / new s73ZOA–C (anti-promotion orders).
+  - ⏭ Then the remaining affected sections (checklist above).

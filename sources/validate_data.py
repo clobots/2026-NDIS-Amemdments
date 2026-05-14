@@ -93,22 +93,37 @@ for it in items:
         unresolved += 1
 
 # ---- plain-English keys must reference real block ids ---------------------
-all_block_ids = set()
-for doc in (orig, prop):
+# a key is either a bare block id (shared translation) or "version:blockId"
+ids = {"original": set(), "proposed": set()}
+for label, doc in (("original", orig), ("proposed", prop)):
     for n in doc["nodes"]:
         if n["type"] == "section":
             for b in n["blocks"]:
-                all_block_ids.add(b["id"])
-stray = [k for k in (pe or {}) if k not in all_block_ids]
+                ids[label].add(b["id"])
+all_block_ids = ids["original"] | ids["proposed"]
+
+
+def pe_key_ok(k):
+    if k in all_block_ids:
+        return True
+    if ":" in k:
+        ver, bid = k.split(":", 1)
+        return ver in ids and bid in ids[ver]
+    return False
+
+
+# keys starting with "_" are metadata (e.g. "_about"), not translations
+pe_keys = [k for k in (pe or {}) if not k.startswith("_")]
+stray = [k for k in pe_keys if not pe_key_ok(k)]
 if stray:
-    err(f"plain-english.json: {len(stray)} keys don't match any block id "
+    err(f"plain-english.json: {len(stray)} keys don't resolve to a block "
         f"(e.g. {stray[:3]})")
 
 # ---- report ---------------------------------------------------------------
 print(f"bill: {len(items)} items  ({unresolved} with no jump target — structural)")
 print(f"act-original: {len(orig_sections)} sections")
 print(f"act-proposed: {len(prop_sections)} sections")
-print(f"plain-english: {len(pe or {})} translations")
+print(f"plain-english: {len(pe_keys)} translations")
 for w in warnings:
     print(f"  warn: {w}")
 if errors:
