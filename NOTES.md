@@ -1,0 +1,147 @@
+# Build Notes — NDIS 2026 Amendments Comparison Tool
+
+Handoff / build-state doc. Read this first when resuming.
+
+## What this is
+
+A frame-driven web tool for advocacy: side-by-side comparison of the **NDIS
+Amendment (Integrity and Safeguarding) Act 2026** against the **National
+Disability Insurance Scheme Act 2013** it amends.
+
+Layout:
+- **Left panel** — the complete amending Act (verbatim), all 96 items across 3
+  Schedules. Each item, on hover, surfaces a link to the NDIS Act section it
+  changes.
+- **Right panel** — equal-size, tabbed:
+  - **Tab 1 "Original NDIS legislation"** — the complete NDIS Act 2013 *before*
+    these amendments. Clicking a left-panel link jumps this tab to the matching
+    section; matching words get a yellow highlight.
+  - **Tab 2 "Proposed Legislation"** — the complete NDIS Act 2013 *as amended*.
+- In both right-panel tabs, hovering any paragraph shows a bubble with a
+  plain-English translation.
+
+## Confirmed decisions
+
+- **Design language:** minimalistic, Apple-like, professional, modern, serious.
+  Advocacy-meets-corporate, post-millennial. Light theme default + dark toggle.
+- **Scope:** full text of all three documents shown directly in the frames (not
+  excerpts). Interactive wiring (hover-links, highlights, plain-English bubbles)
+  to **full coverage** — every amendment item + every affected Act section.
+- **Left panel content:** verbatim bill text — the actual drafting instructions
+  ("Repeal the subsection, substitute: ...").
+- **Plain-English bubbles:** AI-drafted from the Parliamentary Library Bills
+  Digest; each must be visibly flagged "AI-drafted — verify before relying on it."
+- **Stack:** static vanilla HTML/CSS/JS, no build step, GitHub Pages-ready.
+  parlinfo / austlii block both fetching and iframe embedding, so all documents
+  are re-rendered in-app from local data, with deep-links out to the official
+  source.
+
+## The bill
+
+- **National Disability Insurance Scheme Amendment (Integrity and Safeguarding)
+  Act 2026**, No. 41, 2026. Federal Register ID **C2026A00041**.
+- Assented 8 Apr 2026. Schedules 1 & 3 commenced 9 Apr 2026; Schedule 2 commenced
+  6 May 2026.
+- Amends the **National Disability Insurance Scheme Act 2013** (C2013A00020).
+- Structure: Schedule 1 (Commission) Parts 1–7; Schedule 2 (NDIA) Parts 1–3;
+  Schedule 3 (Whistleblower). 96 numbered items total.
+
+## Sources (`sources/`)
+
+Committed clean-text extracts — the working data:
+- `amending-act-2026_C2026A00041.txt` — full verbatim amending Act, all 96 items.
+- `ndis-act-2013_2024-10-03.txt` — NDIS Act 2013, compilation 3 Oct 2024 = the
+  **"original / before"** (pre-amendment).
+- `ndis-act-2013_2026-05-06.txt` — NDIS Act 2013, compilation 6 May 2026
+  (C2026C00181) = the **"proposed / after"** (post-amendment, both schedules in
+  force).
+- `extract.py` — HTML→clean-text converter. Run `python3 extract.py` in `sources/`.
+
+Raw `.html` is git-ignored (large, re-downloadable). To reproduce, from `sources/`
+with a browser User-Agent:
+```
+curl -A "$UA" -L "https://www.legislation.gov.au/C2026A00041/asmade/2026-04-08/text/1/epub/OEBPS/document_1/document_1.html" -o amending-act-2026_C2026A00041.html
+curl -A "$UA" -L "https://www.legislation.gov.au/C2013A00020/2024-10-03/2024-10-03/text/original/epub/OEBPS/document_1/document_1.html" -o ndis-act-2013_2024-10-03.html
+curl -A "$UA" -L "https://www.legislation.gov.au/C2013A00020/2026-05-06/2026-05-06/text/original/epub/OEBPS/document_1/document_1.html" -o ndis-act-2013_2026-05-06.html
+python3 extract.py
+```
+
+Access notes:
+- `parlinfo.aph.gov.au`, `austlii.edu.au` — block automated fetching (403) **and**
+  iframe embedding. Not usable as a live source.
+- `legislation.gov.au` — works via curl with a browser User-Agent. Official
+  source. **Use this.**
+- Plain-English source: Parliamentary Library **Bills Digest** —
+  https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/bd/bd2526/26bd042
+  (fetchable; rich item-by-item summaries).
+- Deep-link target for "view original": the official bill page —
+  https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Results/Result?bId=s1478
+
+## Key insight — the amendment→section mapping is auto-derivable
+
+Every bill item's first line names its target section, e.g.:
+- `33 Subsection 73B(2)` → s73B
+- `80 After subsection 73ZN(2A)` → s73ZN
+- `1 Paragraph 29(1)(d)` → s29
+- `2 After section 29` → inserts new s29A
+
+A regex over item headers
+(`^(\d+[A-Z]*)\s+(Section|Subsection|Paragraph|After section|After subsection|Before section|Before subsection|At the end of section|Division|Part)\s+...`)
+yields the hover-link mapping for ~all 96 items **automatically** — no
+hand-mapping.
+
+Nuance to handle in the parser: some items target a structural unit
+(Part/Division/Chapter) and insert a *new* section — e.g. item 6 → new s59A;
+item 31 → new s11B; item 43 → new s73ZNA; item 76 → new s73ZOA–C. For these the
+hover-link points to the insertion location and Tab 1 shows "no equivalent —
+newly inserted"; the new text lives in Tab 2.
+
+## Affected NDIS Act sections (checklist for plain-English work)
+
+- **Sch 1:** 9, 11B*, 55A, 56, 57, 59A*, 62, 63, 64, 67A, 67B, 67C, 67D, 73B,
+  73D, 73F, 73J, 73V, 73ZC, 73ZDA*, 73ZE, 73ZF, 73ZI, 73ZK, 73ZKA*, 73ZL, 73ZM,
+  73ZN, 73ZNA*, 73ZO, 73ZOA*, 73ZOB*, 73ZOC*, 73ZP, 73ZQ, 73ZS (repealed/moved),
+  99, 199A*, 199B*, 199C*, 200, 201A, 202B, 209
+- **Sch 2:** 29, 29A*, 9A, 45, 45A, 47A, 78, 79
+- **Sch 3:** 73ZA, 73ZB, 73ZBA*
+
+`*` = newly inserted section.
+
+## Build plan / tasks
+
+1. ~~Source legislation content.~~ **Done.**
+2. **Parse** the 3 `.txt` sources → structured JSON: bill tree
+   (Schedule→Part→Division→Item, verbatim text + derived target-section ref);
+   original Act (sections→paragraphs, stable IDs); amended Act (same). Stable
+   paragraph IDs anchor scroll-sync, highlighting and bubbles.
+3. **Design system** — CSS tokens, typography, light/dark, the yellow-highlight
+   + hover-bubble + hover-link treatments.
+4. **HTML shell** — equal split-pane; left = bill; right = tabbed (Tab 1
+   original, Tab 2 proposed); header with theme toggle.
+5. **JS engine** — render docs from JSON; tab switching; theme persistence;
+   hover-link reveal + click→scroll-sync + yellow highlight (all 96 items);
+   plain-English bubble mechanism (renders where data exists, graceful when not).
+6. **Plain-English translations** — the incremental content layer. Draft AI
+   plain-English for every affected section's paragraphs, flagged for review.
+   Multi-session; priority order below.
+7. **Integrate, test** (browser), **commit**.
+
+**Architectural principle:** the HTML/CSS/JS engine is fixed; the bill text,
+mapping and translations are all *data*. Partial data must render gracefully —
+the site is always usable, just progressively richer.
+
+## Plain-English drafting priority (representative spread — do these first)
+
+1. **Schedule 2 Part 1 — Withdrawing from the scheme** (items 1, 2, 2A–2D) →
+   s29, new s29A. 90-day cooling-off period. Participant-facing.
+2. **Schedule 1 Part 2 item 33** — s73B tiered registration offences.
+   Provider-facing, large penalties.
+3. **Schedule 1 Part 5 item 80** — s73ZN banning-order expansion (auditors,
+   consultants, applicants).
+4. **Schedule 1 Part 4 — Anti-promotion orders** (items 75–79) → new s73ZOA–C.
+   Predatory-marketing controls; the "insert new section" case.
+
+## Status
+
+**Sourcing complete.** All three full documents extracted to clean text and
+committed. Next: task 2 — parse into structured JSON.

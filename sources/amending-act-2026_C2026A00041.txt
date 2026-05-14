@@ -1,0 +1,743 @@
+102026-04-19T22:05:00Z2026-04-19T22:05:00Z4578174112312099064803416.0000No. 41, 2026BILL 0x010100F3DFB7B7F9ED05409810B7978C704CB8 AMD0OPC8592YesNational Disability Insurance Scheme Amendment (Integrity and Safeguarding) Act 2026PC:PC:D25/11996,D25/12061BILL
+National Disability Insurance Scheme Amendment (Integrity and Safeguarding) Act 2026
+No. 41, 2026
+An Act to amend the National Disability Insurance Scheme Act 2013, and for related purposes
+Contents
+1 Short title
+2 Commencement
+3 Schedules
+Schedule 1—Amendments relating to the Commission
+Part 1—New civil penalty provisions
+National Disability Insurance Scheme Act 2013
+Part 2—New criminal offences and increased penalties for existing civil penalty provisions
+National Disability Insurance Scheme Act 2013
+Part 3—Regulatory powers
+Division 1—Main amendments
+National Disability Insurance Scheme Act 2013
+Division 2—Consequential amendments
+National Disability Insurance Scheme Act 2013
+Division 3—Application, transitional and savings provisions
+Part 4—Anti-promotion orders
+National Disability Insurance Scheme Act 2013
+Part 5—Banning orders
+Division 1—Main amendments
+National Disability Insurance Scheme Act 2013
+Division 2—Consequential amendments
+National Disability Insurance Scheme Act 2013
+Part 6—Information gathering
+Division 1—Main amendments
+National Disability Insurance Scheme Act 2013
+Division 2—Application and transitional provisions
+Part 7—Evidentiary certificates
+National Disability Insurance Scheme Act 2013
+Schedule 2—Amendments relating to the National Disability Insurance Agency
+Part 1—Withdrawing from the scheme
+National Disability Insurance Scheme Act 2013
+Part 2—Electronic claims forms
+National Disability Insurance Scheme Act 2013
+Part 3—Plan variation
+National Disability Insurance Scheme Act 2013
+Schedule 3—Whistleblower amendments
+National Disability Insurance Scheme Act 2013
+National Disability Insurance Scheme Amendment (Integrity and Safeguarding) Act 2026
+No. 41, 2026
+An Act to amend the National Disability Insurance Scheme Act 2013, and for related purposes
+[Assented to 8 April 2026]
+The Parliament of Australia enacts:
+1 Short title
+This Act is the National Disability Insurance Scheme Amendment (Integrity and Safeguarding) Act 2026.
+2 Commencement
+(1) Each provision of this Act specified in column 1 of the table commences, or is taken to have commenced, in accordance with column 2 of the table. Any other statement in column 2 has effect according to its terms.
+Commencement information
+Column 1
+Column 2
+Column 3
+Provisions
+Commencement
+Date/Details
+1. Sections 1 to 3 and anything in this Act not elsewhere covered by this table
+The day after this Act receives the Royal Assent.
+9 April 2026
+2. Schedule 1
+The day after this Act receives the Royal Assent.
+9 April 2026
+3. Schedule 2
+The 28th day after this Act receives the Royal Assent.
+6 May 2026
+4. Schedule 3
+The day after this Act receives the Royal Assent.
+9 April 2026
+Note: This table relates only to the provisions of this Act as originally enacted. It will not be amended to deal with any later amendments of this Act.
+(2) Any information in column 3 of the table is not part of this Act. Information may be inserted in this column, or information in it may be edited, in any published version of this Act.
+3 Schedules
+Legislation that is specified in a Schedule to this Act is amended or repealed as set out in the applicable items in the Schedule concerned, and any other item in a Schedule to this Act has effect according to its terms.
+Schedule 1—Amendments relating to the Commission
+Part 1—New civil penalty provisions
+National Disability Insurance Scheme Act 2013
+1 Section 57 (heading)
+Omit “Offence—refusal”, substitute “Refusal”.
+2 Subsection 57(1) (note)
+Repeal the note.
+3 After subsection 57(1)
+Insert:
+(1A) A person is liable to a civil penalty if the person contravenes subsection (1) in relation to a requirement made by the Commissioner under section 55A.
+Civil penalty: 60 penalty units.
+4 Subsection 57(2)
+Omit “Subsection (1) does”, substitute “Subsections (1) and (1A) do”.
+5 Subsection 57(2) (at the end of the note)
+Add “and section 96 of the Regulatory Powers Act”.
+6 At the end of Part 1 of Chapter 4
+Add:
+Division 4—Providing false or misleading information or documents to the Commission
+59A Providing false or misleading information or documents to the Commission
+A person contravenes this section if:
+(a) the person provides information or a document to the Commissioner or a Commission officer for the purposes of this Act; and
+(b) the person knows the information or document is false or misleading in a material particular.
+Note: Part 7.4 of the Criminal Code provides offences in relation to false or misleading statements, information and documents.
+Civil penalty: 120 penalty units.
+7 Section 62 (note)
+Repeal the note.
+8 Section 63 (note)
+Repeal the note.
+9 Subsection 64(1) (note)
+Repeal the note.
+10 Subsection 64(2) (note)
+Repeal the note.
+11 Section 67B (heading)
+Omit “Offence—unauthorised”, substitute “Unauthorised”.
+12 Section 67B (after the heading)
+Insert:
+Offence
+13 Section 67B
+Before “A person”, insert “(1)”.
+14 Section 67B (note)
+Repeal the note.
+15 At the end of section 67B
+Add:
+Civil penalty
+(2) A person contravenes this subsection if:
+(a) the person:
+(i) makes a record of information; or
+(ii) discloses information to any other person; or
+(iii) otherwise makes use of information; and
+(b) the person is not authorised or required by or under this Act to make the record, disclosure or use of the information that is made by the person; and
+(c) the information is protected Commission information.
+Civil penalty: 120 penalty units.
+16 Section 67C (heading)
+Omit “Offence—soliciting”, substitute “Soliciting”.
+17 Section 67C (after the heading)
+Insert:
+Offence
+18 Section 67C
+Omit “A person (the first person)”, substitute “(1) A person”.
+19 Paragraph 67C(a)
+Omit “first”.
+20 Section 67C (note)
+Repeal the note.
+21 At the end of section 67C
+Add:
+Civil penalty
+(2) A person contravenes this subsection if
+(a) the person solicits the disclosure of information from a Commission officer or another person, whether or not any protected Commission information is actually disclosed; and
+(b) the disclosure would be in contravention of this Part; and
+(c) the information is protected Commission information.
+Civil penalty: 120 penalty units.
+22 Section 67D (heading)
+Repeal the heading, substitute:
+67D Offering to supply protected Commission information etc.
+23 Before subsection 67D(1)
+Insert:
+Offering to supply protected Commission information—offence
+24 Subsection 67D(1) (note)
+Repeal the note.
+25 After subsection 67D(1)
+Insert:
+Offering to supply protected Commission information—civil penalty
+(1A) A person contravenes this subsection if:
+(a) the person offers to supply (whether to a particular person or otherwise) information about another person; and
+(b) the information is protected Commission information.
+Civil penalty: 120 penalty units.
+26 Before subsection 67D(2)
+Insert:
+Persons holding themselves out as able to supply protected Commission information—offence
+27 Subsection 67D(2) (note)
+Repeal the note.
+28 After subsection 67D(2)
+Insert:
+Persons holding themselves out as able to supply protected Commission information—civil penalty
+(2A) A person contravenes this subsection if:
+(a) the person holds themselves out as being able to supply (whether to a particular person or otherwise) information about another person; and
+(b) the information is protected Commission information.
+Civil penalty: 120 penalty units.
+29 Subsection 67D(3)
+Repeal the subsection, substitute:
+Exception—performing or exercising duties, functions or powers under this Act
+(3) Subsections (1), (1A), (2) and (2A) do not apply to a person acting in the performance or exercise of the person’s duties, functions or powers under this Act.
+Note: A defendant bears an evidential burden in relation to the matter in this subsection: see subsection 13.3(3) of the Criminal Code and section 96 of the Regulatory Powers Act.
+Part 2—New criminal offences and increased penalties for existing civil penalty provisions
+National Disability Insurance Scheme Act 2013
+30 Section 9
+Insert:
+conduct means an act, an omission to perform an act or a state of affairs.
+engage in conduct means:
+(a) do an act; or
+(b) omit to perform an act.
+serious contravention of a provision of this Act: see subsection 11B(1).
+significant failure, in relation to the conduct of an NDIS provider or member of the key personnel of an NDIS provider: see subsection 11B(2).
+systematic pattern of conduct, in relation to the conduct of an NDIS provider or member of the key personnel of an NDIS provider: see subsection 11B(3).
+31 At the end of Part 4 of Chapter 1
+Add:
+11B Definition of serious contravention
+(1) A contravention of a provision of this Act is a serious contravention if the conduct that contravenes the provision:
+(a) involves a significant failure; or
+(b) is part of a systematic pattern of conduct.
+Significant failures
+(2) The conduct of an NDIS provider (the relevant provider) or a member of its key personnel involves a significant failure if the conduct represents a significant departure from the conduct that could reasonably be expected from an NDIS provider or its key personnel, having regard to the requirements that the following are subject to under this Act:
+(a) NDIS providers and their key personnel;
+(b) if the relevant provider is a registered NDIS provider—registered NDIS providers and their key personnel.
+Systematic pattern of conduct
+(3) In determining whether the conduct of an NDIS provider or a member of its key personnel is part of a systematic pattern of conduct, regard must be had to the following:
+(a) the number of times the provider’s or key personnel member’s conduct has not complied with a provision of this Act (the relevant contraventions);
+(b) the period over which the relevant contraventions occurred;
+(c) the number of individuals affected by the relevant contraventions;
+(d) the provider’s or key personnel member’s response, or failure to respond, to any complaints about the relevant contraventions.
+32 Before subsection 73B(1)
+Insert:
+Requirement to be a registered NDIS provider
+33 Subsection 73B(2)
+Repeal the subsection, substitute:
+Failing to comply with requirement to be registered
+(2) A person (the first person) contravenes this subsection if:
+(a) the first person provides a support to another person; and
+(b) the support is provided under a participant’s plan; and
+(c) the National Disability Insurance Scheme rules require the first person to be registered to provide the support under the plan; and
+(d) the first person is not so registered.
+Unregistered persons holding themselves out as being registered
+(3) A person contravenes this subsection if:
+(a) the person holds themselves out as being able to provide a support under a participant’s plan; and
+(b) the National Disability Insurance Scheme rules require the person to be registered to provide the support under the plan; and
+(c) the person is not so registered.
+Fault-based offence
+(4) A person commits an offence if the person contravenes subsection (2) or (3). Absolute liability applies to the physical elements in paragraphs (2)(c) and (3)(b).
+Penalty: Imprisonment for 2 years or 120 penalty units, or both.
+Strict liability offence
+(5) A person commits an offence of strict liability if the person contravenes subsection (2) or (3).
+Penalty: 60 penalty units.
+Civil penalty
+(6) A person is liable to a civil penalty if the person contravenes subsection (2) or (3).
+Civil penalty:
+(a) for a serious contravention by an NDIS provider—10,000 penalty units; or
+(b) in any other case—250 penalty units.
+34 Paragraph 73D(b)
+Omit “the person”.
+35 Section 73D
+Omit all the words after paragraph (b), substitute:
+Note: Part 7.4 of the Criminal Code provides offences in relation to false or misleading statements, information and documents.
+Civil penalty:
+(a) for a serious contravention by an NDIS provider—10,000 penalty units; or
+(b) in any other case—120 penalty units.
+36 Section 73J (penalty)
+Repeal the penalty, substitute:
+Civil penalty:
+(a) for a serious contravention—10,000 penalty units; or
+(b) in any other case—250 penalty units.
+37 Subsection 73V(3) (penalty)
+Repeal the penalty, substitute:
+Civil penalty:
+(a) for a serious contravention by an NDIS provider—10,000 penalty units; or
+(b) in any other case—250 penalty units.
+38 Subsection 73ZC(1) (penalty)
+Repeal the penalty, substitute:
+Civil penalty:
+(a) for a serious contravention by an NDIS provider—10,000 penalty units; or
+(b) in any other case—500 penalty units.
+39 Subsection 73ZC(2) (penalty)
+Repeal the penalty, substitute:
+Civil penalty:
+(a) for a serious contravention by an NDIS provider—10,000 penalty units; or
+(b) in any other case—500 penalty units.
+40 Subsection 73ZI(6) (at the end of the penalty)
+Add “or 120 penalty units, or both”.
+41 Subsection 73ZM(3) (penalty)
+Repeal the penalty, substitute:
+Civil penalty:
+(a) for a serious contravention by an NDIS provider—10,000 penalty units; or
+(b) in any other case—60 penalty units.
+42 Subsection 73ZN(10)
+Repeal the subsection.
+43 After section 73ZN
+Insert:
+73ZNA Complying with banning orders
+(1) A person contravenes this subsection if:
+(a) a banning order has been made against the person; and
+(b) the person engages in conduct; and
+(c) the conduct breaches the banning order (including a condition of the order).
+Fault-based offence
+(2) A person commits an offence if the person contravenes subsection (1).
+Penalty: Imprisonment for 5 years or 300 penalty units, or both.
+Strict liability offence
+(3) A person commits an offence of strict liability if the person contravenes subsection (1).
+Penalty: 150 penalty units.
+Civil penalty
+(4) A person is liable to a civil penalty if the person contravenes subsection (1).
+Civil penalty:
+(a) for a serious contravention by an NDIS provider—10,000 penalty units; or
+(b) in any other case—1,000 penalty units.
+Part 3—Regulatory powers
+Division 1—Main amendments
+National Disability Insurance Scheme Act 2013
+44 Division 8 of Part 3A of Chapter 4 (heading)
+Repeal the heading, substitute:
+Part 3B—Compliance and enforcement
+Division 1—Monitoring and investigation powers
+45 Subsections 73ZE(1) and (2)
+Repeal the subsections, substitute:
+Provisions subject to monitoring
+(1) The following provisions are subject to monitoring under Part 2 of the Regulatory Powers Act:
+(a) Division 2 of Part 2 (privacy of information held by the Commission) of this Chapter;
+(b) Part 3A (NDIS providers) of this Chapter.
+Note: Part 2 of the Regulatory Powers Act creates a framework for monitoring whether the provisions have been complied with. It includes powers of entry and inspection.
+Information subject to monitoring
+(2) Information given in compliance or purported compliance with the following provisions is subject to monitoring under Part 2 of the Regulatory Powers Act:
+(a) Division 2 of Part 2 (privacy of information held by the Commission) of this Chapter;
+(b) Part 3A (NDIS providers) of this Chapter.
+Note: Part 2 of the Regulatory Powers Act creates a framework for monitoring whether the information is correct. It includes powers of entry and inspection.
+46 Subsections 73ZE(3) and (4)
+Omit “this Part”, substitute “the provisions mentioned in subsection (1) and the information mentioned in subsection (2)”.
+47 Paragraph 73ZF(1)(a)
+Omit “in this Part”, substitute “of this Act”.
+48 Paragraph 73ZF(1)(b)
+Omit “this Part”, substitute “Part 3A (NDIS providers) of this Chapter”.
+49 Before section 73ZK
+Insert:
+Division 2—Civil penalty provisions and infringement notices
+50 Section 73ZK
+Omit “this Part” (wherever occurring), substitute “this Act”.
+51 After section 73ZK
+Insert:
+73ZKA Serious contraventions of civil penalty provisions
+(1) If an authorised applicant is applying under the Regulatory Powers Act for a civil penalty order in relation to a serious contravention of a civil penalty provision of this Act, the application under subsection 82(1) of that Act must specify the relevant serious contravention.
+(2) If, in proceedings for a civil penalty order in relation to a serious contravention of a provision of this Act, the relevant court:
+(a) is not satisfied that the person has committed a serious contravention of that provision; and
+(b) is satisfied beyond reasonable doubt that the person has contravened that provision;
+the relevant court may make a civil penalty order against the person not for the serious contravention but for the contravention of that provision.
+52 Subsection 73ZL(1)
+Omit “this Part”, substitute “this Act, other than section 59A or 73D,”.
+53 After subsection 73ZL(1)
+Insert:
+(1A) However, subsection (1B) applies if the civil penalty provision sets out:
+(a) a pecuniary penalty for a serious contravention; and
+(b) another pecuniary penalty (the general penalty amount) for any other case.
+(1B) For the purposes of an infringement notice for an alleged contravention of the civil penalty provision, in working out the amount to be stated in the infringement notice for the purposes of paragraph 104(1)(f) and subsections 104(2) and (3) of the Regulatory Powers Act:
+(a) disregard the pecuniary penalty for a serious contravention; and
+(b) the general penalty amount is taken to be the maximum penalty that a court could impose on a person for contravention of the civil penalty provision in all cases.
+54 Before section 73ZM
+Insert:
+Division 3—Compliance notices, banning orders and anti-promotion orders
+55 Before section 73ZP
+Insert:
+Division 4—Enforceable undertakings and injunctions
+56 Subsection 73ZP(1)
+Repeal the subsection, substitute:
+Enforceable provisions
+(1) The following provisions are enforceable under Part 6 of the Regulatory Powers Act:
+(a) Division 2 of Part 2 (privacy of information held by the Commission) of this Chapter;
+(b) Part 3A (NDIS providers) of this Chapter.
+Note: Part 6 of the Regulatory Powers Act creates a framework for accepting and enforcing undertakings relating to compliance with provisions.
+57 Subsection 73ZQ(1)
+Repeal the subsection, substitute:
+Enforceable provisions
+(1) The following provisions are enforceable under Part 7 of the Regulatory Powers Act:
+(a) Division 2 of Part 2 (privacy of information held by the Commission) of this Chapter;
+(b) Part 3A (NDIS providers) of this Chapter.
+Note: Part 7 of the Regulatory Powers Act creates a framework for using injunctions to enforce provisions.
+58 Before section 73ZR
+Insert:
+Division 5—Inspectors and investigators
+59 After section 199
+Insert:
+199A Physical elements of offences
+(1) This section applies if a provision of this Act provides that a person contravening another provision of this Act (the conduct rule provision) commits an offence.
+(2) For the purposes of applying Chapter 2 of the Criminal Code to the offence, the physical elements of the offence are set out in the conduct rule provision.
+Note: Chapter 2 of the Criminal Code sets out general principles of criminal responsibility.
+199B Contravening offence and civil penalty provisions
+(1) This section applies if a provision of this Act provides that a person contravening another provision of this Act (the conduct provision) commits an offence or is liable to a civil penalty.
+(2) For the purposes of this Act, a reference to a contravention of an offence provision or a civil penalty provision includes a reference to a contravention of the conduct provision.
+Note: This also affects references in the Regulatory Powers Act to a contravention of an offence provision or a civil penalty provision: see the definition of this Act in section 7.
+60 Section 202B (heading)
+Omit “regulatory powers”, substitute “compliance and enforcement powers”.
+61 Subsection 202B(1)
+Omit “Division 8 of Part 3A”, substitute “Part 3B”.
+62 Subsection 202B(1) (table item 1)
+Omit “that Division”, substitute “that Part”.
+Division 2—Consequential amendments
+National Disability Insurance Scheme Act 2013
+63 Section 9
+Insert:
+enforceable undertaking means the following:
+(a) an undertaking accepted under section 114 of the Regulatory Powers Act in relation to a provision of this Act;
+(b) an undertaking accepted under subsection 73ZP(4).
+64 Section 9 (definition of NDIS Provider Register)
+Omit “73ZS”, substitute “73ZDA”.
+65 Section 9 (paragraph (a) of the definition of protected Commission information)
+Omit “73ZS(7)(b)”, substitute “73ZDA(9)(b)”.
+66 After Division 7 of Part 3A of Chapter 4
+Insert:
+Division 7A—NDIS Provider Register
+73ZDA NDIS Provider Register
+NDIS Provider Register
+(1) The Commissioner must establish and maintain a register for the purposes of this Act, to be known as the NDIS Provider Register.
+(2) The NDIS Provider Register may be kept in any form that the Commissioner considers appropriate.
+Banning orders
+(3) The NDIS Provider Register must include each of the following in relation to a person against whom a banning order is in force:
+(a) the name of the person;
+(b) the person’s ABN (if any);
+(c) information about the banning order;
+(d) any other matter prescribed by the National Disability Insurance Scheme rules for the purposes of this paragraph.
+(4) The NDIS Provider Register may include each of the following in relation to a person against whom a banning order was in force:
+(a) the name of the person;
+(b) the person’s ABN (if any);
+(c) information about the banning order;
+(d) any other matter prescribed by the National Disability Insurance Scheme rules for the purposes of this paragraph.
+Registered NDIS providers
+(5) The NDIS Provider Register must include each of the following for each person who is a registered NDIS provider:
+(a) the name of the person;
+(b) the person’s ABN (if any);
+(c) the period for which the registration of the person is in force;
+(d) the address of the principal place of business of the person;
+(e) the classes of supports or services the person is registered to provide;
+(f) if the registration is in respect of a class of persons—the class;
+(g) any conditions to which the registration of the person is subject under section 73G;
+(h) if the registration of the person is suspended—information about the suspension;
+(i) if the person is, or was, subject to a compliance notice—information about the compliance notice;
+(j) if the person has given an enforceable undertaking—information about the undertaking;
+(k) any other matter prescribed by the National Disability Insurance Scheme rules for the purposes of this paragraph.
+NDIS providers (other than registered NDIS providers)
+(6) The NDIS Provider Register may include any of the following in relation to an NDIS provider (other than a registered NDIS provider):
+(a) the name of the person;
+(b) the person’s ABN (if any);
+(c) the address of the principal place of business of the person;
+(d) the classes of supports or services the person provides;
+(e) if the person is, or was, subject to a compliance notice—information about the compliance notice;
+(f) if the person has given an enforceable undertaking—information about the undertaking;
+(g) any other matter prescribed by the National Disability Insurance Scheme rules for the purposes of this paragraph.
+Former NDIS providers
+(7) The NDIS Provider Register may include any of the following in relation to a person who was an NDIS provider:
+(a) the name of the person;
+(b) the person’s ABN (if any);
+(c) the address of the person;
+(d) if the person was a registered NDIS provider and the person’s registration was revoked—information about the revocation;
+(e) any other matter prescribed by the National Disability Insurance Scheme rules for the purposes of this paragraph.
+Other information
+(8) The Commissioner may include other information on the NDIS Provider Register if the Commissioner is satisfied that it is relevant to the provision of supports or services to people with disability.
+Rules
+(9) The National Disability Insurance Scheme rules may make provision for and in relation to the following:
+(a) the correction of entries in the NDIS Provider Register;
+(b) the publication of the NDIS Provider Register in whole or part, or of specified information entered on the NDIS Provider Register;
+(c) any other matter relating to the administration or operation of the NDIS Provider Register.
+67 Division 9 of Part 3A of Chapter 4
+Repeal the Division.
+68 After paragraph 201A(1)(n)
+Insert:
+(na) paragraphs 73ZDA(3)(d), (4)(d), (5)(k), (6)(g) and (7)(e) and subsection 73ZDA(9) (NDIS Provider Register);
+69 Paragraph 201A(1)(p)
+Repeal the paragraph.
+70 Subsection 209(8) (table item 4, column headed “Description”, after paragraph (p))
+Insert:
+(pa) paragraphs 73ZDA(3)(d), (4)(d), (5)(k), (6)(g) and (7)(e) and subsection 73ZDA(9);
+71 Subsection 209(8) (table item 4, column headed “Description”, paragraphs (r) and (s))
+Repeal the paragraphs.
+Division 3—Application, transitional and savings provisions
+72 Application
+The amendments made by this Part apply in relation to conduct occurring before, on or after the commencement of this item.
+73 Transitional—NDIS Provider Register
+The NDIS Provider Register that was established and maintained under section 73ZS of the National Disability Insurance Scheme Act 2013 (as in force before the commencement of this item) continues in existence, on and after that commencement, as the NDIS Provider Register established and maintained under section 73ZDA of that Act (as in force after that commencement).
+74 Savings—rules
+National Disability Insurance Scheme rules made for the purposes of subsection 73ZS(7) of the National Disability Insurance Scheme Act 2013 and that are in force immediately before the commencement of this item continue in force on and after that commencement as if they had been made for the purposes of subsection 73ZDA(9) of that Act, as inserted by this Part.
+Part 4—Anti-promotion orders
+National Disability Insurance Scheme Act 2013
+75 Section 9
+Insert:
+anti-promotion order: see subsection 73ZOA(1).
+regulated promotional conduct: see subsection 73ZOA(2).
+76 After section 73ZO
+Insert:
+73ZOA Anti-promotion orders
+Anti-promotion orders
+(1) The Commissioner may, by written notice, make an order (an anti-promotion order) prohibiting or restricting a person from engaging in regulated promotional conduct of a kind specified in the order if the Commissioner is satisfied that the person has engaged in, or is engaging in, conduct of the specified kind.
+(2) The National Disability Insurance Scheme rules may prescribe as regulated promotional conduct conduct that involves promoting, advertising or marketing matter related to:
+(a) supports or services for people with disability; or
+(b) NDIS providers; or
+(c) things purporting (whether expressly or impliedly) to be things mentioned in paragraph (a) or (b).
+(3) Before making National Disability Insurance Scheme rules prescribing conduct as regulated promotional conduct, the Minister must be satisfied that the conduct undermines the objects of this Act or the principles in section 4.
+Application of anti-promotion orders
+(4) An anti-promotion order may:
+(a) apply generally or be of limited application; and
+(b) be made subject to specified conditions; and
+(c) be permanent or for a specified period.
+(5) An anti-promotion order made against a person takes effect on the day specified in the order, which must not be earlier than:
+(a) unless paragraph (b) applies—7 days after the day the order is given to the person; or
+(b) if the Commissioner considers it is necessary for the order to take effect earlier than that 7 day period in order to protect the health, safety or wellbeing of a person with disability—the day after the day the order is given to the person.
+(6) An anti-promotion order is not a legislative instrument.
+Process
+(7) The Commissioner may make an anti-promotion order against a person only if:
+(a) the Commissioner gives the person an opportunity to make submissions to the Commissioner on the matter; and
+(b) the period of 7 days after the opportunity was given has ended.
+(8) The Commissioner must:
+(a) give the anti-promotion order to the person against whom the order is made; and
+(b) include in the anti-promotion order a statement of reasons for the order.
+73ZOB Complying with anti-promotion orders
+A person contravenes this section if:
+(a) an anti-promotion order has been made against the person; and
+(b) the person engages in conduct; and
+(c) the conduct breaches the anti-promotion order (including a condition of the order).
+Civil penalty: 250 penalty units.
+73ZOC Variation or revocation of anti-promotion orders
+Variation or revocation of anti-promotion orders
+(1) The Commissioner may vary or revoke an anti-promotion order, by giving written notice to the person against whom the order was made, if the Commissioner is satisfied it is appropriate to do so.
+(2) The Commissioner may do so:
+(a) on the Commissioner’s own initiative; or
+(b) on application by the person against whom the order was made.
+(3) Without limiting subsection (1), a variation may involve imposing new conditions or varying or removing existing conditions.
+Process
+(4) An application under paragraph (2)(b) must:
+(a) be in writing; and
+(b) be in the form (if any) approved in writing by the Commissioner; and
+(c) include any information, and be accompanied by any documents, required by the Commissioner.
+(5) If the Commissioner proposes not to vary or revoke an anti-promotion order in accordance with an application lodged by the person under paragraph (2)(b), the Commissioner:
+(a) must give the person an opportunity to make submissions to the Commissioner on the matter; and
+(b) must not make the proposed decision unless the period of 7 days after the opportunity was given has ended.
+(6) The Commissioner must include in the notice under subsection (1) a statement of reasons for the variation or revocation.
+Application of variation or revocation of anti-promotion order
+(7) A variation of an anti-promotion order takes effect on the day specified in the notice under subsection (1), which must not be earlier than:
+(a) unless paragraph (b) applies—7 days after the day the notice is given; or
+(b) if the Commissioner considers it is necessary for the variation to take effect earlier than that 7 day period in order to protect the health, safety or wellbeing of a person with disability—the day after the day the notice is given.
+(8) A revocation of an anti-promotion order takes effect on the day specified in the notice under subsection (1), which must not be earlier than the day the notice is given.
+(9) A variation or revocation of an anti-promotion order is not a legislative instrument.
+77 Subsection 99(1) (after table item 16)
+Insert:
+16A
+a decision to make an anti-promotion order
+section 73ZOA
+Commissioner
+16B
+a decision to vary, or to refuse to vary or revoke, an anti-promotion order
+section 73ZOC
+Commissioner
+78 After paragraph 201A(1)(oa)
+Insert:
+(ob) subsection 73ZOA(2) (anti-promotion orders);
+79 Subsection 209(8) (table item 4, column headed “Description”, after paragraph (qa))
+Insert:
+(qb) subsection 73ZOA(2);
+Part 5—Banning orders
+Division 1—Main amendments
+National Disability Insurance Scheme Act 2013
+80 After subsection 73ZN(2A)
+Insert:
+Banning orders—applicants for registration, approved quality auditors etc.
+(2B) The Commissioner may, by written notice, make an order (a banning order) prohibiting or restricting specified activities by a person mentioned in subsection (2C) if:
+(a) the Commissioner has revoked the registration of the person as a registered NDIS provider; or
+(b) the Commissioner has revoked the approval of the person to be an approved quality auditor; or
+(c) the Commissioner reasonably believes:
+(i) that the person has contravened, is contravening, or is likely to contravene this Act; or
+(ii) that the person has been involved in, or is likely to become involved in, a contravention of this Act by another person; or
+(iii) in the case of a person involved in providing a service mentioned in paragraph (2C)(c) or (d)—that the person is not suitable to be involved in the provision of that service, having regard to any matters prescribed by the National Disability Insurance Scheme rules for the purposes of this subparagraph; or
+(d) the person is convicted of an offence involving fraud or dishonesty; or
+(e) the person becomes an insolvent under administration.
+(2C) The persons are as follows:
+(a) a person who has made an application under section 73C, for registration as a registered NDIS provider, that has not been finally determined;
+(b) an approved quality auditor;
+(c) a person who is employed or otherwise engaged by, or is a member of the key personnel of, a person mentioned in paragraph (a) or (b) of this subsection;
+(d) a person involved in providing any of the following kinds of services:
+(i) services that enable or facilitate the provision of supports or services for people with disability;
+(ii) without limiting subparagraph (i)—services that involve assisting with, or advising on, applications under section 73C for registration as a registered NDIS provider.
+81 Subsection 73ZO(4)
+Repeal the subsection.
+82 Paragraph 201A(1)(oa)
+Omit “and paragraph 73ZN(2A)(a)”, substitute “, paragraph 73ZN(2A)(a) and subparagraph 73ZN(2B)(c)(iii)”.
+83 Subsection 209(8) (table item 4, column headed “Description”, paragraph (qa))
+Omit “and paragraph 73ZN(2A)(a)”, substitute “, paragraph 73ZN(2A)(a) and subparagraph 73ZN(2B)(c)(iii)”.
+Division 2—Consequential amendments
+National Disability Insurance Scheme Act 2013
+84 Paragraph 55A(2)(e)
+After “services”, insert “, or engaged in activities,”.
+Part 6—Information gathering
+Division 1—Main amendments
+National Disability Insurance Scheme Act 2013
+85 At the end of subsection 56(3)
+Add “(subject to subsection (6) in the case of a notice given by the Commissioner)”.
+86 Before subsection 56(4)
+Insert:
+Notice may require person to appear and answer questions
+87 At the end of paragraph 56(5)(b)
+Add “(subject to subsection (6))”.
+88 At the end of section 56
+Add:
+Notice given by Commissioner may specify shorter period or earlier time
+(6) However, if all the conditions in subsection (7) are satisfied, the notice may specify:
+(a) a shorter period for the purposes of subsection (3); or
+(b) an earlier time for the purposes of paragraph (5)(b).
+(7) For the purposes of subsection (6), the conditions are as follows:
+(a) the notice is given by the Commissioner;
+(b) the Commissioner reasonably believes that not specifying the shorter period or earlier time would significantly increase the risk of serious harm to a participant;
+(c) the shorter period or earlier time is reasonable in the circumstances.
+89 Paragraph 73F(2)(i)
+After “information”, insert “or documents”.
+90 At the end of section 73F
+Add:
+(3) Despite paragraph (2)(i), the Commissioner may specify a shorter period within which the information or documents are to be given if:
+(a) the Commissioner reasonably believes that to not do so would significantly increase the risk of serious harm to a participant; and
+(b) the shorter period is reasonable in the circumstances.
+(4) To avoid doubt, paragraph (2)(i) confers on the Commissioner a power to request information that has effect independently of, and does not limit, any other provision of this Act.
+91 After paragraph 201A(1)(a)
+Insert:
+(aa) paragraph 67A(1)(db) (recording, disclosing and using protected Commission information);
+Division 2—Application and transitional provisions
+92 Registered NDIS providers—registration conditions
+Section 73F of the National Disability Insurance Scheme Act 2013, as amended by this Part, applies in relation to a person’s registration as a registered NDIS provider whether the person is registered as an NDIS provider before, at or after the commencement of this item.
+Part 7—Evidentiary certificates
+National Disability Insurance Scheme Act 2013
+93 Before section 200
+Insert:
+199C Evidentiary certificates—proceedings generally
+(1) In any of the following proceedings, a certificate signed by the Commissioner is prima facie evidence of the matters specified in it:
+(a) proceedings for an offence against this Act;
+(b) proceedings for an offence against Part 7.3 (fraudulent conduct) or 7.4 (false or misleading statements) of the Criminal Code that relates to the Commission;
+(c) proceedings for a contravention of a civil penalty provision.
+(2) The certificate may specify any one or more of the following:
+(a) the date on which the Commissioner received a person’s application under section 73C to be a registered NDIS provider;
+(b) the date on which the Commissioner registered a person under section 73E as a registered NDIS provider;
+(c) the date on which a person or entity transitioned from a registered provider of supports to a registered NDIS provider under rules made for the purposes of paragraph 81(2)(b) of Schedule 1 to the National Disability Insurance Scheme Amendment (Quality and Safeguards Commission and Other Measures) Act 2017;
+(d) the date on which a person’s registration as a registered NDIS provider will (subject to section 73K) cease to be in force;
+(e) the date on which a person’s registration as a registered NDIS provider ceased to be in force or was revoked (if applicable);
+(f) the classes of supports or services that a registered NDIS provider is registered to provide;
+(g) the date on which a variation of a person’s registration as a registered NDIS provider takes effect;
+(h) the date on which the Commissioner decided to vary or revoke a person’s registration as a registered NDIS provider;
+(i) any other matter prescribed in the National Disability Insurance Scheme rules for the purposes of this paragraph.
+94 Section 200 (heading)
+Repeal the heading, substitute:
+200 Evidentiary certificates—reparation orders
+95 At the end of subsection 201A(1)
+Add:
+; (r) paragraph 199C(2)(i) (evidentiary certificates).
+96 Subsection 209(8) (at the end of table item 4, column headed “Description”)
+Add:
+; (y) paragraph 199C(2)(i).
+Schedule 2—Amendments relating to the National Disability Insurance Agency
+Part 1—Withdrawing from the scheme
+National Disability Insurance Scheme Act 2013
+1 Paragraph 29(1)(d)
+Repeal the paragraph, substitute:
+(d) the person is taken to withdraw as a participant under subsection 29A(5).
+2 After section 29
+Insert:
+29A Withdrawing as a participant
+(1) A person may make a request to the CEO to no longer be a participant, in any manner approved by the CEO in writing.
+(2) As soon as practicable after receiving the request, the CEO must notify the person of receipt of the request. The notice must be in writing and must:
+(a) include information about the consequences of ceasing to be a participant in the National Disability Insurance Scheme; and
+(b) include information about how to cancel the request; and
+(c) explain that the person will be taken to withdraw as a participant if the request is not cancelled before the end of a specified period (the cooling-off period).
+(3) The period specified in the notice for the purposes of paragraph (2)(c) must not be less than 90 days beginning on the day the notice is given.
+(4) Before the end of the cooling-off period, the CEO may, by notice in writing given to the person, extend the period. The CEO may extend the period more than once.
+(5) If a person does not cancel a request before the end of the cooling-off period, the person is taken to withdraw as a participant at the end of that period.
+(6) Despite subsection 81(1), a notice given under this section to a participant’s correspondence nominee must also be given to the participant.
+(7) Any notice given under this section to a participant must also be given to the participant’s plan nominee.
+2A After paragraph 78(1)(b)
+Insert:
+or (c) withdrawing as a participant under section 29A;
+2B After paragraph 78(5)(b)
+Insert:
+or (c) withdrawing as a participant under section 29A;
+2C After paragraph 79(1)(b)
+Insert:
+; or (c) withdrawing as a participant under section 29A.
+2D Subsection 79(2)
+After “a request”, insert “(other than a request under section 29A)”.
+Part 2—Electronic claims forms
+National Disability Insurance Scheme Act 2013
+4 Subsection 9A(2)
+Repeal the subsection, substitute:
+(2) For each approved form, the CEO must publish the form, or a representation of the form, on the Agency’s website.
+(3) Without limiting subsection 33(3A) of the Acts Interpretation Act 1901, the CEO may approve different forms for different classes of application, claim, report, request, or statement.
+5 After subsection 45(3)
+Insert:
+(3A) The Agency must not pay an amount under the National Disability Insurance Scheme to any person in respect of a participant’s plan if the person who made a claim under section 45A for payment of the amount has not given the CEO the information or documents requested under subsection (3B) within the specified period.
+Note: If an amount cannot be paid because of this subsection, the person may resubmit a claim for the amount in accordance with section 45A.
+(3B) The CEO may, by written notice, require a person who makes a claim for a payment under section 45A to give the CEO such further information or documents in relation to the claim as the CEO reasonably requires.
+(3BA) However, the CEO must not require under subsection (3B) the person to give information or documents unless the CEO is satisfied that requiring the information or documents would not unreasonably interfere with or prejudice the person’s privacy.
+(3C) A notice under subsection (3B) must specify a period, which must not be less than 14 days, within which the information or documents must be given.
+(3D) Before the end of the specified period, the CEO may, by notice in writing given to the person, extend the period. The CEO may extend the period more than once.
+(3E) The Agency may, if the CEO is satisfied it is appropriate to do so, treat an amount as if the person who made the claim under section 45A for payment of the amount has given the CEO information or documents requested under subsection (3B) within the specified period, whether or not the information or documents were given at all, or were given within the specified period.
+6 After paragraph 45A(3)(a)
+Insert:
+(aa) be made in the manner approved (if any), in writing, by the CEO; and
+7 After subsection 45A(3)
+Insert:
+(3A) Without limiting subsection 33(3A) of the Acts Interpretation Act 1901, the CEO may approve different manners for different classes of claim.
+8 Application of amendments
+The amendments of sections 45 and 45A of the National Disability Insurance Scheme Act 2013 made by this Part apply in relation to a claim made on or after the commencement of this item.
+Part 3—Plan variation
+National Disability Insurance Scheme Act 2013
+11 Before subsection 47A(1B)
+Insert:
+Provisions to avoid doubt
+12 Before paragraph 47A(1B)(a)
+Insert:
+(aa) a variation of a total funding amount under subsection (1) may increase or decrease that total funding amount, unless either of the following expressly provides otherwise:
+(i) this Act;
+(ii) the National Disability Insurance Scheme rules made for the purposes of another provision of this Act (including but not limited to paragraph (1)(b) of this section); and
+Schedule 3—Whistleblower amendments
+National Disability Insurance Scheme Act 2013
+1 Subsection 73ZA(1)
+Omit “is” (wherever occurring), substitute “is or was”.
+2 Paragraphs 73ZA(1)(a) to (c)
+Omit “has”, substitute “has or had”.
+3 Paragraph 73ZA(2)(b)
+Repeal the paragraph.
+4 Paragraph 73ZA(2)(c)
+Omit “Act; and”, substitute “Act.”.
+5 Paragraph 73ZA(2)(d)
+Repeal the paragraph.
+6 After section 73ZB
+Insert:
+73ZBA Confidentiality of identity of disclosers
+(1) A person (the first person) contravenes this subsection if:
+(a) another person (the discloser) makes a disclosure of information (the qualifying disclosure) that qualifies for protection under this Division; and
+(b) the first person discloses either of the following (the confidential information):
+(i) the identity of the discloser;
+(ii) information that is likely to lead to the identification of the discloser; and
+(c) the confidential information is information that the first person obtained directly or indirectly because of the qualifying disclosure; and
+(d) the disclosure of the confidential information by the first person:
+(i) is to a person other than the discloser; and
+(ii) is not authorised under subsection (2).
+Civil penalty: 30 penalty units.
+(2) A disclosure of the confidential information by the first person is authorised under this subsection if:
+(a) the disclosure is made to the Commissioner or the Agency; or
+(b) the disclosure is made to any of the following:
+(i) a member of the Australian Federal Police (within the meaning of the Australian Federal Police Act 1979);
+(ii) a special member of the Australian Federal Police (within the meaning of that Act);
+(iii) a member of the police force or police service of a State or Territory;
+(iv) a prosecutor; or
+(c) the disclosure is made to a legal practitioner for the purpose of obtaining legal advice or legal representation in relation to the operation of this Division; or
+(d) the disclosure is made with the consent of the discloser, or the discloser has acted in a way that is inconsistent with keeping the discloser’s identity confidential; or
+(e) the disclosure is necessary to lessen or prevent a serious threat to the safety, health or wellbeing of one or more individuals; or
+(f) the disclosure is made to a court, tribunal or a Royal Commission (within the meaning of the Royal Commissions Act 1902); or
+(g) the discloser elects to have the qualifying disclosure managed as a complaint, and the disclosure is for purposes relating to making, managing or resolving the complaint; or
+(h) both of the following apply:
+(i) the confidential information is in the public domain before the disclosure is made;
+(ii) the original disclosure of the confidential information into the public domain (before the disclosure is made) was not in contravention of subsection (1).
+Note: For paragraph (g), the National Disability Insurance Scheme rules may deal with how complaints may be made, managed and resolved (see section 73X).
+(3) Subsection (1) does not apply if:
+(a) the confidential information disclosed by the first person:
+(i) is not the identity of the discloser; and
+(ii) is reasonably necessary for the purposes of dealing with the contravention that the qualifying disclosure indicates an NDIS provider has, or may have, made; and
+(b) the first person takes all reasonable steps to reduce the risk that the discloser will be identified as a result of the disclosure of the confidential information.
+(4) In this section, prosecutor means a person who institutes or is responsible for the conduct of a prosecution of an offence.
+7 Application
+(1) The amendments of section 73ZA of the National Disability Insurance Scheme Act 2013 made by this Schedule apply in relation to a disclosure of information by the discloser on or after the commencement of this item.
+(2) Section 73ZBA of the National Disability Insurance Scheme Act 2013, as inserted by this Schedule, applies in relation to a disclosure of information by the first person on or after the commencement of this item, whether that information was obtained by the first person before, on or after that commencement.
+[Minister’s second reading speech made in—
+Senate on 26 November 2025
+House of Representatives on 31 March 2026]
+(115/25)
