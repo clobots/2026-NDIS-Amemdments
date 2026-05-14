@@ -237,8 +237,13 @@ Keys beginning with `_` (e.g. `_about`) are metadata and ignored.
   - ✅ Batch 8 — s73F registration conditions (before + after; the new
     shorter-period power + "or documents") and the new s73ZDA NDIS Provider
     Register (structural blocks) (35).
-  - ⏭ Remaining: s73ZA whistleblower-eligibility wording changes, the
-    s45/45A/47A NDIA operational changes (electronic claims, plan variation),
-    and the unchanged tail of s73ZN ((3)–(9)) + s73ZDA field lists. All lower
+  - ✅ Batch 9 — s73ZA whistleblower eligibility, before + after (extends
+    protection to former workers/clients; removes the "give your name first"
+    and "good faith" barriers) and s47A plan variation — the new "avoid
+    doubt" clause confirming a variation can increase or decrease total
+    funding (29).
+  - ⏭ Remaining: s45/45A (electronic claims forms, Schedule 2 Part 2) and
+    s9A (approved forms); the unchanged tails of s73ZN ((3)–(9)), s73ZDA
+    field lists, and s47A's 100+ unchanged plan-mechanics blocks. All lower
     priority; the engine renders them the moment keys are added to
     `data/plain-english.json`.
