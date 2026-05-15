@@ -2,29 +2,39 @@
 
 Handoff / build-state doc. Read this first when resuming.
 
-## ⚠️ ARCHITECTURE PIVOT — read this first
+## ⚠️ ARCHITECTURE — read this first
 
-The **live site is now a two-live-iframe shell**, not the re-rendered
+The **live site is a side-rail + live-iframe shell**, not the re-rendered
 "annotated" app described in the rest of this file.
 
-**What happened.** The original build re-rendered the legislation text in-app
-because I believed parlinfo blocked iframe embedding. That belief was wrong —
-I only ever tested *fetching* parlinfo (which 403s on bot user-agents); I never
-tested *framing* it. A proper header check showed **neither parlinfo nor
-legislation.gov.au sends `X-Frame-Options` or a CSP `frame-ancestors`** — both
-embed fine. The user confirmed framing works in Chrome and chose to make both
-panels live iframes.
+**Pivot history.** The original build re-rendered the legislation text in-app
+because I believed parlinfo blocked iframe embedding — wrong; I'd tested
+*fetching* parlinfo (which 403s on bot user-agents), never *framing* it.
+Header check confirmed neither parlinfo nor legislation.gov.au sends
+`X-Frame-Options` or CSP `frame-ancestors` — both embed fine. A second probe
+in a real Chrome browser (with a same-origin control) confirmed JS on the
+parent page **cannot** read into the cross-origin frames (`SecurityError`).
+The user chose to keep both frames live; cross-origin sealing rules out
+injecting interactions directly into them.
 
 **Current live site (`index.html` + `js/app.js` + `css/app.css`):**
-- **Left** — live iframe of the Bill on ParlInfo (the user's original spec URL).
-- **Right** — tabbed live iframes of the NDIS Act 2013 on the Federal Register:
-  *Original* = the 2024-10-03 compilation (pre-amendment); *Proposed* = the
-  2026-05-06 compilation (amendments in force). Proposed iframe is lazy-loaded
-  on first tab activation.
-- `js/app.js` now only does tab switching, lazy-load, per-frame loading
-  overlays, and the theme toggle. **It cannot reach inside the iframes** —
-  cross-origin same-origin policy. No DOM injection, highlighting or scroll-sync
-  is possible against a live cross-origin frame.
+- **Left** — an interactive side-rail rendered from `data/bill.json`: every
+  one of the 96 bill items, grouped by Schedule / Part / Division, with a
+  kind-coloured dot (amend / insert / structural / provision), the item
+  number, descriptor (e.g. *Subsection 73B(2)*), and target section.
+- **Right** — the live NDIS Act 2013 from the Federal Register, tabbed:
+  *Original* = the 2024-10-03 compilation; *Proposed* = the 2026-05-06
+  compilation. The iframes point at the **epub document HTML**, not the SPA
+  viewer, because that's the URL legislation.gov.au's own navigation deep-
+  links into and where `#_Toc<id>` anchors work.
+- **Clicking a rail item** sets the visible iframe's `src` to
+  `<epub-html>#<anchor>` (anchor map in `data/anchors.json`, built from the
+  downloaded compilations). Items that insert a new section auto-switch to
+  the Proposed tab and jump to the new section. The other tab's "intent" is
+  remembered so tab-switching shows the corresponding section.
+- Each `iframe.src` change is a same-document navigation — a brief flash (the
+  document caches after first load), not a re-download. That's the deep-link
+  mechanism legislation.gov.au itself uses.
 
 **The interactions workstream.** The user will guide the development of the
 hover-links / highlighting / plain-English-bubble interactions separately,
